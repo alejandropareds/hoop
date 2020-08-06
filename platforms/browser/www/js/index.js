@@ -70,6 +70,14 @@ var app7 = new Framework7({
         path: '/recuperar/',
         url: 'views/recuperar.html',
       },
+      {
+        path: '/productos/',
+        url: 'views/productos.html',
+      },
+      {
+        path: '/producto/',
+        url: 'views/producto.html',
+      },
     ],
     // ... other parameters
   });
@@ -173,9 +181,16 @@ function Registrarse(){
   getPromo();
   });
 
+  $$(document).on('page:init','.page[data-name="productos"]',function(e){
+
+    //alert("alerta");
+    getPromo();
+    getProductos();
+    });
+
   function getPromo(){
   
-    app7.preloader.show();
+    app7.preloader.show('blue');
   
     app7.request({
       url: 'http://localhost/hoop/api/promociones.php',
@@ -195,9 +210,11 @@ function Registrarse(){
 
         for(x in objson.data){
 
-          console.log(objson.data[x].titulo);
+         // console.log(objson.data[x].titulo);
 
-          var slide = '<div class="swiper-slide"><img src="'+objson.data[x].imagen+'" /></div>';
+           
+
+          var slide = '<div class="swiper-slide"><img src="'+objson.data[x].imagen+'"width="100%"/> </div>';
 
           swiper.appendSlide(slide);
         }
@@ -210,6 +227,94 @@ function Registrarse(){
       });
 
   }
+
+
+
+  function getProductos(){
+  
+    app7.preloader.show('blue');
+    $$('#productos').html("");
+  
+    app7.request({
+      url: 'http://localhost/hoop/api/productos.php',
+      data:{},
+      method:'POST',
+      crossDomain: true,
+      success:function(data){
+           
+        app7.preloader.hide();
+  
+        var objson = JSON.parse(data);
+
+        var producto="";
+
+        for(x in objson.data){
+
+         // console.log(objson.data[x].titulo);
+
+         producto = '<a href="javascript:verproducto('+objson.data[x].id+')" class="card demo-card-header-pic vistaproductos"><div style="background-image:url('+objson.data[x].imagen1+')" class="card-header align-items-flex-end">'+objson.data[x].titulo+'</div><div class="card-content card-content-padding"><p class="date">'+objson.data[x].marca+'</p></div><div class"row"><div class="letraprod" style="padding-left: 20%;">'+objson.data[x].talla+'</div><div class="letraprod" style="padding-left: 10%;">'+objson.data[x].precio+'</div></div> <div class="card-footer"></div></a>';
+
+          $$('#productos').append(producto)
+        }
+
+      },
+      error:function(error){
+  
+        app7.preloader.hide();
+      }
+      });
+
+  }
+
+  function verproducto(id){
+    idproducto = id;
+    mainView.router.navigate('/producto/',{animate:true});
+  }
+
+  $$(document).on('page:init', '.page[data-name="producto"]', function (e) {
+
+  
+
+    app7.preloader.show('blue');
+    
+
+    app7.request({
+      url: 'http://localhost/hoop/api/producto.php',
+      data:{id:idproducto},
+      method:'POST',
+      crossDomain: true,
+      success:function(data){
+           
+        app7.preloader.hide();
+
+        var objson = JSON.parse(data);
+
+        var producto= "";
+
+
+        //console.log(objson.data.titulo);
+
+
+        $$('#titulo-producto').html(objson.data.titulo);
+        $$('#talla-producto').html(objson.data.talla);
+        $$('#precio-producto').html(objson.data.precio);
+
+
+        $$('#imagen1-producto').html('<img src="'+objson.data.imagen1+'" width="100%"/>');   
+      
+      },
+      error:function(error){
+
+        app7.preloader.hide();
+      
+      }
+      
+      });
+
+});
+
+ 
+
 
   function Cancelar () {
 
