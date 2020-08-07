@@ -18,14 +18,34 @@
         
     <div class="page-content">
         <div class="block">
-
-            <div class="card card-outline">
-                <div class="card-content card-content-padding" id="imagen1-producto"></div>
+          <div class="card card-outline">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container" id="imagen1-producto">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container" id="imagen2-producto">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container" id="imagen3-producto">
+                  </div>
+              </div>
+              </div>
+               
+                    <!-- Override maxRatio parameter 
+                    <div class="swiper-zoom-container" data-swiper-zoom="5">
+                        <img src="path/to/image1.jpg">
+                    </div> -->
+                
             </div>
+        </div>
 
             <div class="card card-outline">
                 <div class="card-header" id="titulo-producto"></div>
-                <div class="card-content card-content-padding" id="talla-producto">Card with header and footer. Card headers are used to display card titles and footers for additional information or just for custom actions.</div>
+                <div class="card-content card-content-padding" id="talla-producto"></div>
                 <div class="card-footer" id="precio-producto"></div>
             </div>
     

@@ -121,9 +121,14 @@ h1 {
 
 }
 .logo {
-  margin-top: 200px;
-  margin-left: 140px;
-}
+    position: absolute;
+      margin: auto;
+      top: 30%;
+      left: -5%;
+      right: 0;
+      bottom: 0;
+      width: 80px;
+  }
 .blak { background-color: rgb(31, 27, 27);}
 
 .bgstart{
@@ -138,6 +143,12 @@ h1 {
   background-position: center top;
 }
 
+.marca{
+  height: 55px;
+  background-color: #f2f2f2;
+  padding: 9px;
+  border: none;
+}
 
 h1 { 
    font-family: serif;

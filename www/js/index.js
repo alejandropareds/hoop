@@ -231,6 +231,7 @@ function Registrarse(){
           var slide = '<div class="swiper-slide"><img src="'+objson.data[x].imagen+'"width="100%"/> </div>';
 
           swiper.appendSlide(slide);
+
         }
 
       },
@@ -291,6 +292,15 @@ function Registrarse(){
 
     app7.preloader.show('blue');
     
+    var mySwiper = new Swiper('.swiper-container', {
+      zoom: {
+        maxRatio: 5,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+      },
+    });
 
     app7.request({
       url: 'http://hoopbazar.com/api/producto.php',
@@ -314,7 +324,9 @@ function Registrarse(){
         $$('#precio-producto').html(objson.data.precio);
 
 
-        $$('#imagen1-producto').html('<img src="'+objson.data.imagen1+'" width="100%"/>');   
+        $$('#imagen1-producto').html('<img src="'+objson.data.imagen1+'" width="100%"/>');  
+        $$('#imagen2-producto').html('<img src="'+objson.data.imagen2+'" width="100%"/>');
+        $$('#imagen3-producto').html('<img src="'+objson.data.imagen3+'" width="100%"/>');  
       
       },
       error:function(error){
