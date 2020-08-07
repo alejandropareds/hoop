@@ -1,0 +1,49 @@
+{
+    "name": "Hoop Bazar",
+    "short_name": "Hoop",
+    "description": "Aplicación Movil Hoop Bazar",
+    "background_color": "#FFFFFF",
+    "theme_color": "#D8D8D8",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "./?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es-MX",
+    "icons": [
+      {
+        "src": "./img/favicon-310x310.png",
+        "sizes": "310x310",
+        "type": "image/png"
+      },
+      {
+        "src": "./img/favicon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "./img/favicon-120x120.png",
+        "sizes": "120x120",
+        "type": "image/png"
+      },
+      {
+        "src": "./img/favicon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      },
+      {
+        "src": "./img/favicon-60x60.png",
+        "sizes": "60x60",
+        "type": "image/png"
+      },
+      {
+        "src": "./img/favicon-32x32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "./img/favicon.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      }
+    ]
+  }

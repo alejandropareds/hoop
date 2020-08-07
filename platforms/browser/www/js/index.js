@@ -109,7 +109,7 @@ var app7 = new Framework7({
     app7.preloader.show('blue');
 
     app7.request({
-      url: 'http://localhost/hoop/api/login.php',
+      url: 'http://hoopbazar.com/api/login.php',
       data:{correo:correo,password:password},
       method:'POST',
       crossDomain: true,
@@ -145,7 +145,7 @@ function Registrarse(){
   app7.preloader.show('blue');
 
   app7.request({
-    url: 'http://localhost/hoop/api/users.php',
+    url: 'http://hoopbazar.com/api/users.php',
     data:{nombre:nombre,apellidos:apellidos,correo:correo,password:password},
     method:'POST',
     crossDomain: true,
@@ -193,7 +193,7 @@ function Registrarse(){
     app7.preloader.show('blue');
   
     app7.request({
-      url: 'http://localhost/hoop/api/promociones.php',
+      url: 'http://hoopbazar.com/api/promociones.php',
       data:{},
       method:'POST',
       crossDomain: true,
@@ -236,7 +236,7 @@ function Registrarse(){
     $$('#productos').html("");
   
     app7.request({
-      url: 'http://localhost/hoop/api/productos.php',
+      url: 'http://hoopbazar.com/api/productos.php',
       data:{},
       method:'POST',
       crossDomain: true,
@@ -279,7 +279,7 @@ function Registrarse(){
     
 
     app7.request({
-      url: 'http://localhost/hoop/api/producto.php',
+      url: 'http://hoopbazar.com/api/producto.php',
       data:{id:idproducto},
       method:'POST',
       crossDomain: true,
