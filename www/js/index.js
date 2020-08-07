@@ -173,7 +173,17 @@ function Registrarse(){
     });
   }
 
- 
+  $$(document).on('page:init','.page[data-name="login"]',function(e){
+
+    });
+
+    $$(document).on('page:init','.page[data-name="registro"]',function(e){
+  
+    });
+
+    $$(document).on('page:init','.page[data-name="registrop"]',function(e){
+  
+    });
 
   $$(document).on('page:init','.page[data-name="home"]',function(e){
 
@@ -186,6 +196,10 @@ function Registrarse(){
     //alert("alerta");
     getPromo();
     getProductos();
+    });
+
+    $$(document).on('page:init','.page[data-name="producto"]',function(e){
+
     });
 
   function getPromo(){
