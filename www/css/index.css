@@ -143,12 +143,7 @@ h1 {
   background-position: center top;
 }
 
-.marca{
-  height: 55px;
-  background-color: #f2f2f2;
-  padding: 9px;
-  border: none;
-}
+
 
 h1 { 
    font-family: serif;
@@ -213,13 +208,35 @@ h3 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
   font-family: serif;
   font-weight: bold;
 }
+.size-22 { font-size: 22px }
 
 .vistaproductos{
 
-width: 45%;
+margin-left: 2.5%;
+width: 44.5%;
 float: left;
 
+}
+.marca{
+  height: 55px;
+  background-color: #f2f2f2;
+  padding: 9px;
+  border: none;
+}
 
+.categoria {
+  border-radius: 50%;
+  height: 70px;
+  border: none;
+}
+.panel {
+  min-width: 100px;
+  max-width: 90vw;
+}
+
+.red {
+  color: red;
+  background-color: red;
 }
 
 .demo-card-header-pic .card-header {

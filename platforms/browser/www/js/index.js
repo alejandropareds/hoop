@@ -78,6 +78,10 @@ var app7 = new Framework7({
         path: '/producto/',
         url: 'views/producto.html',
       },
+      {
+        path: '/perfil/',
+        url: 'views/perfil.html',
+      },
     ],
     // ... other parameters
   });
@@ -122,6 +126,8 @@ var app7 = new Framework7({
         if(objson.data == "AUTENTICADO"){
 
           localStorage.setItem("team-login", "autenticado");
+          localStorage.setItem("correo", correo);
+
         mainView.router.navigate('/home/',{animate:true});
         }
         else{
@@ -201,7 +207,10 @@ function Registrarse(){
     $$(document).on('page:init','.page[data-name="producto"]',function(e){
 
     });
-
+    $$(document).on('page:init','.page[data-name="perfil"]',function(e){
+  
+      
+    });
   function getPromo(){
   
     app7.preloader.show('blue');
@@ -288,8 +297,6 @@ function Registrarse(){
 
   $$(document).on('page:init', '.page[data-name="producto"]', function (e) {
 
-  
-
     app7.preloader.show('blue');
     
     var mySwiper = new Swiper('.swiper-container', {
@@ -301,7 +308,6 @@ function Registrarse(){
         },
       },
     });
-
     app7.request({
       url: 'http://hoopbazar.com/api/producto.php',
       data:{id:idproducto},
@@ -315,31 +321,75 @@ function Registrarse(){
 
         var producto= "";
 
-
-        //console.log(objson.data.titulo);
-
-
         $$('#titulo-producto').html(objson.data.titulo);
         $$('#talla-producto').html(objson.data.talla);
         $$('#precio-producto').html(objson.data.precio);
-
-
+    
         $$('#imagen1-producto').html('<img src="'+objson.data.imagen1+'" width="100%"/>');  
         $$('#imagen2-producto').html('<img src="'+objson.data.imagen2+'" width="100%"/>');
         $$('#imagen3-producto').html('<img src="'+objson.data.imagen3+'" width="100%"/>');  
+
+        $$('#favorito-producto').append(id);
       
       },
       error:function(error){
 
         app7.preloader.hide();
-      
-      }
-      
+      },
       });
 
 });
 
- 
+function ValidaUsuario(){
+  var correo = localStorage.getItem('correo');
+
+  if(correo!="null"){
+    return true;
+  }
+  else{
+    return false;
+  }
+
+}
+
+function Favorito(id){
+
+  if (ValidaUsuario()){
+
+
+  var producto = id;
+  var usuario = localStorage.getItem('correo');
+  
+
+
+  app7.request({
+    url: 'http://localhost/hoop/api/setfavorito.php',
+    data:{correo:correo,producto:producto},
+    method:'POST',
+    crossDomain: true,
+    success:function(resultado){
+
+      var objson = JSON.parse(resultado);
+
+      if(objson.data=="ELIMINADO"){ //sin color
+
+        $$('#favorito-'+id).attr('class','f7-icons');
+
+      }else{ //color en rojo f7-icons
+
+        $$('#favorito-'+id).attr('class','f7-icons red');
+      }
+
+    },
+    error:function(error){
+
+  
+    }
+    });}
+    else { 
+      alert('Es necesario registrarse para guardar un favorito')
+    }
+}
 
 
   function Cancelar () {
@@ -351,6 +401,7 @@ function Registrarse(){
 
     //checkConnection();
     localStorage.setItem("team-login", "false");
+    localStorage.setItem("correo", null);
   
     mainView.router.navigate('/start/',{animate:true});
   }

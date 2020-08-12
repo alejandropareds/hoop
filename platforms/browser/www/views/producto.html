@@ -15,6 +15,31 @@
             <div class="right"></div>
           </div>
         </div>
+         <!--  Toolbar -->
+  <div class="toolbar tabbar tabbar-labels toolbar-bottom">
+    <div class="toolbar-inner">
+    <a href="#tab-1" class="tab-link">
+      <i class="f7-icons size-22">bag</i>
+      <span class="tabbar-label">Canasta</span>
+    </a>
+    <a href="/productos/" class="tab-link tab-link-active">
+      <i class="f7-icons size-22">tag</i>
+      <span class="tabbar-label">Productos</span>
+    </a>
+    <a href="/home/" class="tab-link">
+      <i class="f7-icons size-22">house</i>
+      <span class="tabbar-label">Inicio</span>
+    </a>
+    <a href="#tab-4" class="tab-link">
+      <i class="f7-icons size-22">bell</i>
+      <span class="tabbar-label">Notificaciones</span>
+    </a>
+    <a href="/perfil/" class="tab-link">
+      <i class="f7-icons size-22">person</i>
+      <span class="tabbar-label">Perfil</span>
+    </a>
+    </div>
+  </div>
         
     <div class="page-content">
         <div class="block">
@@ -44,18 +69,15 @@
         </div>
 
             <div class="card card-outline">
-                <div class="card-header" id="titulo-producto"></div>
+                <div class="card-header" id="titulo-producto">  </div>
+                
+                <i class="f7-icons size-22" style="float: right; margin-top: -38px; margin-right: 42px;" id="favorito-producto" onclick="Favorito(id)">heart</i>
+                <i class="f7-icons size-22" style="float: right; margin-top: -38px; margin-right: 10px;">arrowshape_turn_up_right</i>
                 <div class="card-content card-content-padding" id="talla-producto"></div>
                 <div class="card-footer" id="precio-producto"></div>
             </div>
     
-    
-            
-       
-    
-       
-    
-    
+  
       
     
         </div>
@@ -64,8 +86,6 @@
         </div>
     
       </div>
-    </div>
-
 
     
 
