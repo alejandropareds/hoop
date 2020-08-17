@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "227523192529",
-    "firebase_url": "https://hoop-3805e.firebaseio.com",
-    "project_id": "hoop-3805e",
-    "storage_bucket": "hoop-3805e.appspot.com"
+    "project_number": "155178635261",
+    "firebase_url": "https://hoop-d79ed.firebaseio.com",
+    "project_id": "hoop-d79ed",
+    "storage_bucket": "hoop-d79ed.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:227523192529:android:ff5bf652064ab857ac87f0",
+        "mobilesdk_app_id": "1:155178635261:android:851f28f2b74940ade91394",
         "android_client_info": {
           "package_name": "com.hoop.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "227523192529-p8ku4jst44vlp1a14e8c0sv9d1pgsp6b.apps.googleusercontent.com",
+          "client_id": "155178635261-fkh17nkai899k7bdpb0eti1oftcm6r8e.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCXn7hh2lUTK-wfxN2CryOPED4MNVv9ro0"
+          "current_key": "AIzaSyB3a6HDYwE_Oj52H9Eofi-vIujkmJKpVwk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "227523192529-p8ku4jst44vlp1a14e8c0sv9d1pgsp6b.apps.googleusercontent.com",
+              "client_id": "155178635261-fkh17nkai899k7bdpb0eti1oftcm6r8e.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
