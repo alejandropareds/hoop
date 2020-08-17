@@ -36,6 +36,12 @@
     },
     "cordova-plugin-vibration": {
       "PACKAGE_NAME": "com.hoop.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.hoop.app"
+    },
+    "phonegap-plugin-push": {
+      "PACKAGE_NAME": "com.hoop.app"
     }
   },
   "dependent_plugins": {

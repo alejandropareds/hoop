@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "227523192529",
+    "firebase_url": "https://hoop-3805e.firebaseio.com",
+    "project_id": "hoop-3805e",
+    "storage_bucket": "hoop-3805e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227523192529:android:ff5bf652064ab857ac87f0",
+        "android_client_info": {
+          "package_name": "com.hoop.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227523192529-p8ku4jst44vlp1a14e8c0sv9d1pgsp6b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXn7hh2lUTK-wfxN2CryOPED4MNVv9ro0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "227523192529-p8ku4jst44vlp1a14e8c0sv9d1pgsp6b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
