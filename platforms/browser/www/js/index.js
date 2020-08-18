@@ -69,7 +69,6 @@ var app = {
       console.log('Received Event: ' + id);
   }
 };
-};
 
         function getToken(token,platform){
 
