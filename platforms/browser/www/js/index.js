@@ -247,9 +247,7 @@ function Registrarse(){
 
   $$(document).on('page:init','.page[data-name="login"]',function(e){
 
-    if(platform !="browser"){
-    getToken();
-    }
+    
     });
 
     $$(document).on('page:init','.page[data-name="registro"]',function(e){
@@ -273,9 +271,51 @@ function Registrarse(){
     getProductos();
     });
 
-    $$(document).on('page:init','.page[data-name="producto"]',function(e){
+    $$(document).on('page:init', '.page[data-name="producto"]', function (e) {
 
-    });
+      app7.preloader.show('blue');
+      
+      var mySwiper = new Swiper('.swiper-container', {
+        zoom: {
+          maxRatio: 5,
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+          },
+        },
+      });
+      app7.request({
+        url: 'https://hoopbazar.com/api/producto.php',
+        data:{id:idproducto},
+        method:'POST',
+        crossDomain: true,
+        success:function(data){
+             
+          app7.preloader.hide();
+  
+          var objson = JSON.parse(data);
+  
+          var producto= "";
+  
+          $$('#titulo-producto').html(objson.data.titulo);
+          $$('#talla-producto').html(objson.data.talla);
+          $$('#precio-producto').html(objson.data.precio);
+      
+          $$('#imagen1-producto').html('<img src="'+objson.data.imagen1+'" width="100%"/>');  
+          $$('#imagen2-producto').html('<img src="'+objson.data.imagen2+'" width="100%"/>');
+          $$('#imagen3-producto').html('<img src="'+objson.data.imagen3+'" width="100%"/>');  
+  
+          $$('#favorito-producto').append(id);
+        
+        },
+        error:function(error){
+  
+          app7.preloader.hide();
+        },
+        });
+  
+  });
+
     $$(document).on('page:init','.page[data-name="perfil"]',function(e){
   
       
@@ -322,7 +362,6 @@ function Registrarse(){
   }
 
 
-
   function getProductos(){
   
     app7.preloader.show('blue');
@@ -364,50 +403,44 @@ function Registrarse(){
     mainView.router.navigate('/producto/',{animate:true});
   }
 
-  $$(document).on('page:init', '.page[data-name="producto"]', function (e) {
+  function setMarca(marca){
+    marca = marca;
 
     app7.preloader.show('blue');
-    
-    var mySwiper = new Swiper('.swiper-container', {
-      zoom: {
-        maxRatio: 5,
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-        },
-      },
-    });
+  
     app7.request({
-      url: 'https://hoopbazar.com/api/producto.php',
-      data:{id:idproducto},
+      url: 'https://hoopbazar.com/api/filtros.php',
+      data:{marca:marca},
       method:'POST',
       crossDomain: true,
       success:function(data){
            
         app7.preloader.hide();
-
+  
         var objson = JSON.parse(data);
 
-        var producto= "";
+        var producto="";
 
-        $$('#titulo-producto').html(objson.data.titulo);
-        $$('#talla-producto').html(objson.data.talla);
-        $$('#precio-producto').html(objson.data.precio);
-    
-        $$('#imagen1-producto').html('<img src="'+objson.data.imagen1+'" width="100%"/>');  
-        $$('#imagen2-producto').html('<img src="'+objson.data.imagen2+'" width="100%"/>');
-        $$('#imagen3-producto').html('<img src="'+objson.data.imagen3+'" width="100%"/>');  
+        for(x in objson.data){
 
-        $$('#favorito-producto').append(id);
-      
+         // console.log(objson.data[x].titulo);
+
+         producto = '<a href="javascript:verproducto('+objson.data[x].id+')" class="card demo-card-header-pic vistaproductos"><div style="background-image:url('+objson.data[x].imagen1+')" class="card-header align-items-flex-end">'+objson.data[x].titulo+'</div><div class="card-content card-content-padding"><p class="date">'+objson.data[x].marca+'</p></div><div class"row"><div class="letraprod" style="padding-left: 20%;">'+objson.data[x].talla+'</div><div class="letraprod" style="padding-left: 10%;">'+objson.data[x].precio+'</div></div> <div class="card-footer"></div></a>';
+
+          $$('#productos').append(producto)
+        }
+
       },
       error:function(error){
-
+  
         app7.preloader.hide();
-      },
+      }
       });
 
-});
+  }
+
+
+ 
 
 function ValidaUsuario(){
   var correo = localStorage.getItem('correo');
