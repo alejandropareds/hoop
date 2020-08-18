@@ -5,6 +5,7 @@ var categoria ="";
 var token="";
 var platform = "";
 
+
 var app = {
   // Application Constructor
   initialize: function() {
@@ -27,47 +28,47 @@ var app = {
   // Update DOM on a Received Event
   receivedEvent: function(id) {
 
+      var push = PushNotification.init({
+          android:{
 
-    platform = device.platform;
+          },ios:{
+              alert:"true",
+              badge:true,
+              sound:'false'
+          }
+    });
 
-    if(device.platform !="browser"){
-     
-        var push = PushNotification.init({
-              android:{
+    push.on('registration',function(data){
 
-              },ios:{
-                  alert:"true",
-                  badge:true,
-                  sound:'false'
-              }
-        });
+      alert(data.registrationId);
 
+      console.log(data.registrationId);
+      console.log(data.registrationType);
 
-        push.on('registration', function (data) {
-         
-          
+    });
 
-          getToken(data.registrationId,device.platform);
-          
-          token = data.registrationId;
-          console.log(data.registrationId);
-          console.log(data.registrationType);
-      
-          });
+    push.on('notification',function(data){ 
+
+      console.log(data.message);
+      console.log(data.title);
+      console.log(data.count);
+      console.log(data.sound);
+      console.log(data.image);
+      console.log(data.additionalData);
+
+    });
 
 
-          push.on('notification', function (data) {
+      var parentElement = document.getElementById(id);
+      var listeningElement = parentElement.querySelector('.listening');
+      var receivedElement = parentElement.querySelector('.received');
 
-              console.log(data.message);
-              console.log(data.title);
-              console.log(data.count);
-              console.log(data.sound);
-              console.log(data.image);
-              console.log(data.additionalData);
+      listeningElement.setAttribute('style', 'display:none;');
+      receivedElement.setAttribute('style', 'display:block;');
 
-          });
-        }
+      console.log('Received Event: ' + id);
   }
+};
 };
 
         function getToken(token,platform){
