@@ -83,7 +83,7 @@ var app = {
 
 
           app7.request({
-            url: 'http://localhost/hoop/api/settoken.php',
+            url: 'https://hoopbazar.com/api/settoken.php',
             data:{token:token,platform:platform},
             method:'POST',
             crossDomain: true,
@@ -179,7 +179,7 @@ var app7 = new Framework7({
     app7.preloader.show('blue');
 
     app7.request({
-      url: 'http://hoopbazar.com/api/login.php',
+      url: 'https://hoopbazar.com/api/login.php',
       data:{correo:correo,password:password},
       method:'POST',
       crossDomain: true,
@@ -217,7 +217,7 @@ function Registrarse(){
   app7.preloader.show('blue');
 
   app7.request({
-    url: 'http://hoopbazar.com/api/users.php',
+    url: 'https://hoopbazar.com/api/users.php',
     data:{nombre:nombre,apellidos:apellidos,correo:correo,password:password},
     method:'POST',
     crossDomain: true,
@@ -247,8 +247,9 @@ function Registrarse(){
 
   $$(document).on('page:init','.page[data-name="login"]',function(e){
 
+    if(platform !="browser"){
     getToken();
-
+    }
     });
 
     $$(document).on('page:init','.page[data-name="registro"]',function(e){
@@ -284,7 +285,7 @@ function Registrarse(){
     app7.preloader.show('blue');
   
     app7.request({
-      url: 'http://hoopbazar.com/api/promociones.php',
+      url: 'https://hoopbazar.com/api/promociones.php',
       data:{},
       method:'POST',
       crossDomain: true,
@@ -328,7 +329,7 @@ function Registrarse(){
     $$('#productos').html("");
   
     app7.request({
-      url: 'http://hoopbazar.com/api/productos.php',
+      url: 'https://hoopbazar.com/api/productos.php',
       data:{},
       method:'POST',
       crossDomain: true,
@@ -377,7 +378,7 @@ function Registrarse(){
       },
     });
     app7.request({
-      url: 'http://hoopbazar.com/api/producto.php',
+      url: 'https://hoopbazar.com/api/producto.php',
       data:{id:idproducto},
       method:'POST',
       crossDomain: true,
@@ -431,7 +432,7 @@ function Favorito(id){
 
 
   app7.request({
-    url: 'http://localhost/hoop/api/setfavorito.php',
+    url: 'https://localhost/hoop/api/setfavorito.php',
     data:{correo:correo,producto:producto},
     method:'POST',
     crossDomain: true,
