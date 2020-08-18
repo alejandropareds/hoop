@@ -5,7 +5,6 @@ var categoria ="";
 var token="";
 var platform = "";
 
-
 var app = {
   // Application Constructor
   initialize: function() {
@@ -28,52 +27,59 @@ var app = {
   // Update DOM on a Received Event
   receivedEvent: function(id) {
 
-      var push = PushNotification.init({
-          android:{
 
-          },ios:{
-              alert:"true",
-              badge:true,
-              sound:'false'
-          }
-    });
+    platform = device.platform;
 
-    push.on('registration',function(data){
+    if(device.platform !="browser"){
+     
+        var push = PushNotification.init({
+              android:{
 
-      alert(data.registrationId);
-
-      console.log(data.registrationId);
-      console.log(data.registrationType);
-
-    });
-
-    push.on('notification',function(data){ 
-
-      console.log(data.message);
-      console.log(data.title);
-      console.log(data.count);
-      console.log(data.sound);
-      console.log(data.image);
-      console.log(data.additionalData);
-
-    });
+              },ios:{
+                  alert:"true",
+                  badge:true,
+                  sound:'false'
+              }
+        });
 
 
-      var parentElement = document.getElementById(id);
-      var listeningElement = parentElement.querySelector('.listening');
-      var receivedElement = parentElement.querySelector('.received');
+        push.on('registration', function (data) {
+         
+          
 
-      listeningElement.setAttribute('style', 'display:none;');
-      receivedElement.setAttribute('style', 'display:block;');
+          getToken(data.registrationId,device.platform);
+          
+          token = data.registrationId;
+          console.log(data.registrationId);
+          console.log(data.registrationType);
+      
+          });
 
-      console.log('Received Event: ' + id);
+
+          push.on('notification', function (data) {
+
+              console.log(data.message);
+              console.log(data.title);
+              console.log(data.count);
+              console.log(data.sound);
+              console.log(data.image);
+              console.log(data.additionalData);
+
+          });
+
+        }
+
   }
 };
 
+
         function getToken(token,platform){
+
 
           var token = token;
           var platform = platform;
+
+        
 
 
           app7.request({
@@ -240,6 +246,8 @@ function Registrarse(){
   }
 
   $$(document).on('page:init','.page[data-name="login"]',function(e){
+
+    getToken();
 
     });
 
