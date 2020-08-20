@@ -1,7 +1,11 @@
 var $$ = Dom7;
 
 var marca ="";
+var talla="";
+var precio="";
 var categoria ="";
+var condicion="";
+var color="";
 var token="";
 var platform = "";
 
@@ -362,13 +366,13 @@ function Registrarse(){
   }
 
 
-  function getProductos(){
+  function getProductos(marca="",talla="",precio="",categoria="",condicion="",color=""){
   
     app7.preloader.show('blue');
     $$('#productos').html("");
   
     app7.request({
-      url: 'https://hoopbazar.com/api/productos.php',
+      url: 'https://hoopbazar.com/api/filtros.php',
       data:{},
       method:'POST',
       crossDomain: true,
@@ -386,7 +390,7 @@ function Registrarse(){
 
          producto = '<a href="javascript:verproducto('+objson.data[x].id+')" class="card demo-card-header-pic vistaproductos"><div style="background-image:url('+objson.data[x].imagen1+')" class="card-header align-items-flex-end">'+objson.data[x].titulo+'</div><div class="card-content card-content-padding"><p class="date">'+objson.data[x].marca+'</p></div><div class"row"><div class="letraprod" style="padding-left: 20%;">'+objson.data[x].talla+'</div><div class="letraprod" style="padding-left: 10%;">'+objson.data[x].precio+'</div></div> <div class="card-footer"></div></a>';
 
-          $$('#productos').append(producto)
+          $$('#productos').append(producto);
         }
 
       },
@@ -404,17 +408,34 @@ function Registrarse(){
   }
 
   function setMarca(marca){
+
+    mainView.router.navigate('/productos/',{animate:true});
     marca = marca;
 
-    app7.preloader.show('blue');
   
+
+   setTimeout(function(){ getFiltros(marca)}, 500);
+
+   
+  
+    
+
+  }
+
+  function getFiltros(marca){
+
+    app7.preloader.show('blue');
+
+    
+    $$('#productos').html("");
+
     app7.request({
       url: 'https://hoopbazar.com/api/filtros.php',
       data:{marca:marca},
       method:'POST',
       crossDomain: true,
       success:function(data){
-           
+          
         app7.preloader.hide();
   
         var objson = JSON.parse(data);
@@ -427,7 +448,7 @@ function Registrarse(){
 
          producto = '<a href="javascript:verproducto('+objson.data[x].id+')" class="card demo-card-header-pic vistaproductos"><div style="background-image:url('+objson.data[x].imagen1+')" class="card-header align-items-flex-end">'+objson.data[x].titulo+'</div><div class="card-content card-content-padding"><p class="date">'+objson.data[x].marca+'</p></div><div class"row"><div class="letraprod" style="padding-left: 20%;">'+objson.data[x].talla+'</div><div class="letraprod" style="padding-left: 10%;">'+objson.data[x].precio+'</div></div> <div class="card-footer"></div></a>';
 
-          $$('#productos').append(producto)
+          $$('#productos').append(producto);
         }
 
       },
@@ -436,9 +457,7 @@ function Registrarse(){
         app7.preloader.hide();
       }
       });
-
   }
-
 
  
 
