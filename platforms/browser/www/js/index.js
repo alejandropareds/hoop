@@ -1,9 +1,9 @@
 var $$ = Dom7;
 
-var marca ="";
+var marca2 ="";
 var talla="";
 var precio="";
-var categoria ="";
+var categoria2 ="";
 var condicion="";
 var color="";
 var token="";
@@ -272,15 +272,13 @@ function Registrarse(){
   $$(document).on('page:init','.page[data-name="productos"]',function(e){
 
     //alert("alerta");
-    getPromo();
+    getPromo2();
    
 
-    if(marca!=""){
-     
-    }
-    else{
+    
       getProductos();
-    }
+
+
     
   
 
@@ -352,7 +350,48 @@ function Registrarse(){
 
         var promo="";
 
-        var swiper = app7.swiper.get('.swiper-container');
+        var swiper = app7.swiper.get('.demo-swiper');
+        swiper.removeAllSlides();
+
+        for(x in objson.data){
+
+         // console.log(objson.data[x].titulo);
+
+           
+
+          var slide = '<div class="swiper-slide"><img src="'+objson.data[x].imagen+'"width="100%"/> </div>';
+
+          swiper.appendSlide(slide);
+
+        }
+
+      },
+      error:function(error){
+  
+        app7.preloader.hide();
+      }
+      });
+
+  }
+
+  function getPromo2(){
+  
+    app7.preloader.show('blue');
+  
+    app7.request({
+      url: 'https://hoopbazar.com/api/promociones.php',
+      data:{},
+      method:'POST',
+      crossDomain: true,
+      success:function(data){
+           
+        app7.preloader.hide();
+  
+        var objson = JSON.parse(data);
+
+        var promo="";
+
+        var swiper = app7.swiper.get('.demo-swiper2');
         swiper.removeAllSlides();
 
         for(x in objson.data){
@@ -376,29 +415,43 @@ function Registrarse(){
 
   }
   function setMarca(marca){
-    marca = marca;
+    categoria2="";
+    talla="";
+    precio="";
+    condicion="";
+    color="";
+
+    marca2 = marca;
 
     mainView.router.navigate('/productos/',{animate:true});
-
-    getProductos(marca);
   }
 
   function setCategoria(categoria){
-    categoria = categoria;
+
+    marca="";
+    talla="";
+    precio="";
+    condicion="";
+    color="";
+
+    categoria2 = categoria;
 
     mainView.router.navigate('/productos/',{animate:true});
 
-    getProductos(categoria);
+    //console.log("categoria:-"+categoria2);
+    
   }
 
-  function getProductos(marca="",talla="",precio="",categoria="",condicion="",color=""){
-  
+  function getProductos(){
+
+    
+
     app7.preloader.show('blue');
     $$('#productos').html("");
   
     app7.request({
       url: 'https://hoopbazar.com/api/filtros.php',
-      data:{marca:marca,talla:talla,precio:precio,categoria:categoria,condicion:condicion,color:color},
+      data:{marca:marca2,talla:talla,precio:precio,categoria:categoria2,condicion:condicion,color:color},
       method:'POST',
       crossDomain: true,
       success:function(data){
