@@ -248,7 +248,7 @@ function Registrarse(){
     }
     });
   }
-
+  
   $$(document).on('page:init','.page[data-name="login"]',function(e){
 
     
@@ -266,13 +266,24 @@ function Registrarse(){
 
   //alert("alerta");
   getPromo();
+  
   });
 
   $$(document).on('page:init','.page[data-name="productos"]',function(e){
 
     //alert("alerta");
     getPromo();
-    getProductos();
+   
+
+    if(marca!=""){
+     
+    }
+    else{
+      getProductos();
+    }
+    
+  
+
     });
 
     $$(document).on('page:init', '.page[data-name="producto"]', function (e) {
@@ -309,7 +320,7 @@ function Registrarse(){
           $$('#imagen2-producto').html('<img src="'+objson.data.imagen2+'" width="100%"/>');
           $$('#imagen3-producto').html('<img src="'+objson.data.imagen3+'" width="100%"/>');  
   
-          $$('#favorito-producto').append(id);
+         // $$('#favorito-producto').append(id);
         
         },
         error:function(error){
@@ -364,7 +375,21 @@ function Registrarse(){
       });
 
   }
+  function setMarca(marca){
+    marca = marca;
 
+    mainView.router.navigate('/productos/',{animate:true});
+
+    getProductos(marca);
+  }
+
+  function setCategoria(categoria){
+    categoria = categoria;
+
+    mainView.router.navigate('/productos/',{animate:true});
+
+    getProductos(categoria);
+  }
 
   function getProductos(marca="",talla="",precio="",categoria="",condicion="",color=""){
   
@@ -373,7 +398,7 @@ function Registrarse(){
   
     app7.request({
       url: 'https://hoopbazar.com/api/filtros.php',
-      data:{},
+      data:{marca:marca,talla:talla,precio:precio,categoria:categoria,condicion:condicion,color:color},
       method:'POST',
       crossDomain: true,
       success:function(data){
@@ -401,25 +426,12 @@ function Registrarse(){
       });
 
   }
+ 
+  
 
   function verproducto(id){
     idproducto = id;
     mainView.router.navigate('/producto/',{animate:true});
-  }
-
-  function setMarca(marca){
-
-    mainView.router.navigate('/productos/',{animate:true});
-    marca = marca;
-
-  
-
-   setTimeout(function(){ getFiltros(marca)}, 500);
-
-   
-  
-    
-
   }
 
   function getFiltros(marca){
