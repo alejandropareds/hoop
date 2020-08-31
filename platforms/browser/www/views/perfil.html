@@ -7,19 +7,88 @@
       <div class="navbar-inner">
         <div class="left">
         </div>
-        <div class="title">Hoop</div>
+        <div class="title" href="/home/">Hoop</div>
         <div class="right">
-            <i class="f7-icons">text_justify</i>
+            <i class="f7-icons panel-open" href="#" data-panel=".panel-right-1">bars</i>
+            <div class="panel panel-right panel-right-1 panel-cover panel-resizable panel-init">
+
+              <div class="row">
+                <div class="col-80"></div>
+             <div class="col-20">  <i class="f7-icons size-30 panel-close" style="margin-top: 15px; color: #C9C9C9;">multiply</i></div>
+            </div>
+              <div class="block">
+
+                
+                <div class="treeview"> 
+                  <!-- Mis pedidos -->
+                  <div class="treeview-item" style="margin-left: -35px;">
+                    <div class="treeview-item-root">
+                      <div class="treeview-item-content">
+                        <i class="icon f7-icons color-custom">cube_box</i>
+                        <div class="treeview-item-label sfui" style="font-size: 15px; color: #454545;">Mis pedidos</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Mi balance -->
+                  <!-- Mis preferencias -->
+                  <p>
+                  <div class="treeview-item" style="margin-left: -35px;">
+                    <div class="treeview-item-root">
+                      <div class="treeview-item-content">
+                        <i class="icon f7-icons icpan">resize</i>
+                        <div class="treeview-item-label sfui" style="font-size: 15px; color: #454545;">Mis preferencias</div>
+                      </div>
+                    </div>
+                  </div>
+                </p>
+                  <!-- Configuracion -->
+                  <p>
+                  <div class="treeview-item" style="margin-left: -35px;">
+                    <div class="treeview-item-root">
+                      <div class="treeview-item-content">
+                        <i class="icon f7-icons icpan">gear_alt</i>
+                        <div class="treeview-item-label sfui" style="font-size: 15px; color: #454545;">Configuracion</div>
+                      </div>
+                    </div>
+                  </div>
+                </p>
+
+                </div>
+                
+              </div>
+              <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="50" data-speed="400" data-autoplay="true" class="swiper-container swiper-init demo-swiper3">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                  
+              </div>
+            </div>
+            
+              <div class="row legal">
+                Terminos y condiciones
+              </div>
+              <div class="row legal">
+                Politica de privacidad y aviso legal
+              </div>
+              <div class="row legal">
+                Preguntas frecuentes
+              </div>
+              <div class="row legal">
+                Contactar a soporte
+              </div>
+          
+              <div class="row panel-close legal" style="margin-top: 10px; color: #440202;" onclick="CerrarSesion()">Cerrar Sesion</div>
+            
         </div>
+      </div>
       </div>
     </div>
      <!--  Toolbar -->
 <div class="toolbar tabbar tabbar-labels toolbar-bottom">
 <div class="toolbar-inner">
-<a href="#tab-1" class="tab-link">
+<!-- <a href="#tab-1" class="tab-link">
   <i class="f7-icons size-22">bag</i>
   <span class="tabbar-label">Canasta</span>
-</a>
+</a> -->
 <a href="/productos/" class="tab-link">
   <i class="f7-icons size-22">tag</i>
   <span class="tabbar-label">Productos</span>
@@ -28,10 +97,10 @@
   <i class="f7-icons size-22">house</i>
   <span class="tabbar-label">Inicio</span>
 </a>
-<a href="#tab-4" class="tab-link">
+<!-- <a href="#tab-4" class="tab-link">
   <i class="f7-icons size-22">bell</i>
   <span class="tabbar-label">Notificaciones</span>
-</a>
+</a> -->
 <a href="/perfil/" class="tab-link tab-link-active">
   <i class="f7-icons size-22">person</i>
   <span class="tabbar-label">Perfil</span>
@@ -40,7 +109,39 @@
 </div>
     
 <div class="page-content">
-   
-  
+   <div class="block">
+      <div class="row">
+        <div class="col-33"> </div>
+         <div class="col-66">
+           Alejandro Paredes
+      </div>
+    </div>
+</div>
+
+<div class="toolbar tabbar toolbar-bottom">
+  <div class="toolbar-inner">
+    <a href="#tab-1" class="tab-link tab-link-active">Mis productos</a>
+    <a href="#tab-2" class="tab-link">Mis favoritos</a>
+    
+  </div>
+</div>
+<div class="tabs-swipeable-wrap">
+  <div class="tabs">
+    <div id="tab-1" class="page-content tab tab-active">
+      <div class="block">
+        <p>Tab 1 content</p>
+        ...
+      </div>
+    </div>
+    <div id="tab-2" class="page-content tab">
+      <div class="block">
+        <p>Tab 2 content</p>
+        ...
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </div>
 </div>

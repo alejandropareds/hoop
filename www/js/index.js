@@ -70,7 +70,6 @@ var app = {
               console.log(data.additionalData);
 
           });
-
         }
 
   }
@@ -331,7 +330,7 @@ function Registrarse(){
 
     $$(document).on('page:init','.page[data-name="perfil"]',function(e){
   
-      
+      getPromo3();
     });
   function getPromo(){
   
@@ -393,6 +392,46 @@ function Registrarse(){
 
         var swiper = app7.swiper.get('.demo-swiper2');
         swiper.removeAllSlides();
+
+        for(x in objson.data){
+
+         // console.log(objson.data[x].titulo);
+
+           
+
+          var slide = '<div class="swiper-slide"><img src="'+objson.data[x].imagen+'"width="100%"/> </div>';
+
+          swiper.appendSlide(slide);
+
+        }
+
+      },
+      error:function(error){
+  
+        app7.preloader.hide();
+      }
+      });
+
+  }
+  function getPromo3(){
+  
+    app7.preloader.show('blue');
+  
+    app7.request({
+      url: 'https://hoopbazar.com/api/promociones.php',
+      data:{},
+      method:'POST',
+      crossDomain: true,
+      success:function(data){
+           
+        app7.preloader.hide();
+  
+        var objson = JSON.parse(data);
+
+        var promo="";
+
+        var swiper = app7.swiper.get('.demo-swiper3');
+        
 
         for(x in objson.data){
 
