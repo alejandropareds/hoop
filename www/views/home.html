@@ -6,17 +6,343 @@
     <div class="navbar-bg"></div>
     <div class="navbar-inner">
       <div class="left">
+
+        <!-- Panel Filtros-->
         <i class="f7-icons size-22 panel-open" href="#" data-panel=".panel-left" style="margin-left: 10px;">text_alignleft</i>
-        <div class="panel panel-left panel-cover panel-resizable panel-init">
-          
+        <div class="panel panel-left panel-cover panel-resizable panel-init" style="width: 100%;">
+          <div class="row"> 
+            <div class="col" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px; text-align: center; color: #5E6066; margin-top: 18px;"> 
+            
+            Filtros</div> </div>
 
-          <div class="block">
-            <p><i class="f7-icons size-22"><a class="panel-close" href="#">multiply</a></i></p>
+          <div class="row">
+            <div class="col-80"></div>
+         <div class="col-20">  <i class="f7-icons size-30 panel-close" style="margin-top: -50px; color: #C9C9C9;">multiply</i></div>
+        </div>
+        
 
-            <p>Left Panel content here</p>   
+          <!-- Panel Filtro Categoria -->
+          <div class="block elevation-3" style="margin-top: 10px;">
+            <div class="row">
+              <div class="col txtfiltros">
+                Categorias
+              </div>
+            </div>
+            <div class="list" style="margin-top: 5px; margin-left: 40px;">
+              <ul>
+                <li>
+                  <label class="item-radio item-radio-icon-start item-content">
+                    <input type="radio" name="demo-radio-start" value="Tops" />
+                    <i class="icon icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title filtcateg">Tops</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
+                    <input type="radio" name="demo-radio-start" value="Vestidos" />
+                    <i class="icon icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title filtcateg">Vestidos</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
+                    <input type="radio" name="demo-radio-start" value="Pantalones"  />
+                    <i class="icon icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title filtcateg">Pantalones</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
+                    <input type="radio" name="demo-radio-start" value="Chaquetas & Abrigos" />
+                    <i class="icon icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title filtcateg">Chaquetas & Abrigos</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
+                    <input type="radio" name="demo-radio-start" value="Faldas" />
+                    <i class="icon icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title filtcateg">Faldas</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
+                    <input type="radio" name="demo-radio-start" value="Zapatos" />
+                    <i class="icon icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title filtcateg">Zapatos</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
+                    <input type="radio" name="demo-radio-start" value="Bolsas" />
+                    <i class="icon icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title filtcateg">Bolsas</div>
+                    </div>
+                  </label>
+                </li>
+                <li>
+                  <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
+                    <input type="radio" name="demo-radio-start" value="Accesorios" />
+                    <i class="icon icon-radio"></i>
+                    <div class="item-inner">
+                      <div class="item-title filtcateg">Accesorios</div>
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            
+          </div> 
+           <!-- Panel Filtro Marcas -->
+          <div class="block elevation-3" style="margin-top: 10px; padding-bottom: 12px;">
+            <div class="row">
+              <div class="col txtfiltros">
+                Marcas
+              </div>
+            </div>
+            <div class="row" style="margin-top: 5px;">
+    
+              <button class="col-33 elevation-3 marca2" onclick="setMarca('Zara')">
+                <img src="../img/logos/zara.svg" style="width: 66px; height: 26px;">
+              </button>
+              
+              <button class="col-33 elevation-3 marca2" onclick="setMarca('Bershka')">
+                <img src="../img/logos/bershka-1.svg" style="width: 76px;height: 30px; position: relative; right: 3px;">
+              </button>
+        
+              <button class="col-33 elevation-3 marca2" onclick="setMarca('MassimoDutti')">
+                <img src="../img/logos/massimo-dutti-1.svg" style="width: 87px;height: 32px; position: relative; right: 8px;">
+              </button>
+        
           </div>
-      </div>
-      <div class="title" href="/home/">Hoop</div>
+          <div class="row">
+            
+             <button class="col-33 elevation-3 marca2" style="margin-top: 15px;" onclick="setMarca('Pull&Bear')">
+              <img src="../img/logos/pull-bear-2.svg" style="width: 81px; height: 33px; position: relative; right: 5px;"> 
+             </button>
+            
+            <button class="col-33 elevation-3 marca2" style="margin-top: 15px;" onclick="setMarca('Oysho')">
+              <img src="../img/logos/oysho-1.svg" style="width: 79px;height: 30px; position: relative; right: 5px;">
+            </button>
+        
+            <button class="col-33 elevation-3 marca2" style="margin-top: 15px;" onclick="setMarca('Stradivarius')">
+              <img src="../img/logos/stradivarius-1.svg" style="width: 81px;height: 33px; position: relative; right: 5px;">
+            </button>
+          </div>
+
+        </div> 
+         <!-- Panel Filtro Tallas -->
+         <div class="block elevation-3" style="margin-top: 10px; padding-bottom: 12px;">
+          <div class="row">
+            <div class="col txtfiltros">
+              Tallas</div> </div>
+              <div class="row txtfiltros" style="font-size: 14px;"> Superior</div>
+              <div class="row" style="margin-top: 5px;">
+              <button class="col-15 elevation-3 tallab">XS</button> 
+              <button class="col-15 elevation-3 tallab">S</button> 
+              <button class="col-15 elevation-3 tallab">M</button> 
+              <button class="col-15 elevation-3 tallab">L</button> 
+              <button class="col-15 elevation-3 tallab">XL</button> 
+              <button class="col-15 elevation-3 tallab">XXL</button> 
+            </div>
+
+            <div class="row txtfiltros" style="font-size: 14px; margin-top: 15px;"> Inferior</div>
+              <div class="row" style="margin-top: 5px;">
+              <button class="col-15 elevation-3 tallab">XS</button> 
+              <button class="col-15 elevation-3 tallab">S</button> 
+              <button class="col-15 elevation-3 tallab">M</button> 
+              <button class="col-15 elevation-3 tallab">L</button> 
+              <button class="col-15 elevation-3 tallab">XL</button> 
+              <button class="col-15 elevation-3 tallab">XXL</button> 
+            </div>
+
+            <div class="row txtfiltros" style="font-size: 14px;  margin-top: 15px;"> Calzado</div>
+              <div class="row" style="margin-top: 5px;">
+              <button class="col-15 elevation-3 tallab">2</button> 
+              <button class="col-15 elevation-3 tallab">2.5</button> 
+              <button class="col-15 elevation-3 tallab">3</button> 
+              <button class="col-15 elevation-3 tallab">3.5</button> 
+              <button class="col-15 elevation-3 tallab">4</button> 
+              <button class="col-15 elevation-3 tallab">4.5</button> 
+            </div>
+            <div class="row" style="margin-top: 10px;">
+              <button class="col-15 elevation-3 tallab">5</button> 
+              <button class="col-15 elevation-3 tallab">5.5</button> 
+              <button class="col-15 elevation-3 tallab">6</button> 
+              <button class="col-15 elevation-3 tallab">6.5</button> 
+              <button class="col-15 elevation-3 tallab">7</button> 
+              <button class="col-15 elevation-3 tallab">7.5</button> 
+            </div>
+        </div> 
+
+        <!-- Panel Filtro Condicion-->
+        <div class="block elevation-3" style="margin-top: 10px;">
+          <div class="row">
+            <div class="col txtfiltros">
+              Condicion</div> </div>
+              <div class="list" style="margin-top: 5px; margin-left: 40px;">
+                <ul>
+                  <li>
+                    <label class="item-radio item-radio-icon-start item-content">
+                      <input type="radio" name="demo-radio-start" value="Nuevo con etiqueta"/>
+                      <i class="icon icon-radio"></i>
+                      <div class="item-inner">
+                        <div class="item-title filtcateg">Nuevo con etiqueta</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
+                      <input type="radio" name="demo-radio-start" value="Nuevo sin etiqueta"/>
+                      <i class="icon icon-radio"></i>
+                      <div class="item-inner">
+                        <div class="item-title filtcateg">Nuevo sin etiqueta</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
+                      <input type="radio" name="demo-radio-start" value="En perfecto estado"/>
+                      <i class="icon icon-radio"></i>
+                      <div class="item-inner">
+                        <div class="item-title filtcateg">En perfecto estado</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
+                      <input type="radio" name="demo-radio-start" value="Pequeño defecto"/>
+                      <i class="icon icon-radio"></i>
+                      <div class="item-inner">
+                        <div class="item-title filtcateg">Pequeño defecto</div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+        </div>
+
+        <!-- Panel Filtro Color-->
+        <div class="block elevation-3" style="margin-top: 10px; padding-bottom: 12px;">
+          <div class="row">
+            <div class="col txtfiltros">
+              Color</div> </div>
+              <div class="row" style="margin-top: 5px;">
+              <button class="col-15 colorb" style="background-color: red;"></button> 
+              <button class="col-15 colorb" style="background-color: blue;"></button> 
+              <button class="col-15 colorb" style="background-color: yellow;"></button> 
+              <button class="col-15 colorb" style="background-color: green;"></button> 
+              <button class="col-15 colorb" style="background-color: orange;"></button> 
+              <button class="col-15 colorb" style="background-color: purple;"></button> 
+            
+            </div>
+            <div class="row" style="margin-top: 10px;">
+              <button class="col-15 colorb" style="background-color: black;"></button> 
+              <button class="col-15 colorb" style="background-color: gold;"></button>
+              <button class="col-15 colorb" style="background-color:  gray;"></button>
+              <button class="col-15 colorb" style="background-color: brown;"></button>
+              <button class="col-15 colorb" style="background-color: pink;"></button>
+              <button class="col-15 colorb" style="background-color: white; border: 1px solid black;"></button>
+              
+            </div>
+
+        </div>
+
+        <!-- Panel Filtro Precio-->
+        <div class="block elevation-3" style="margin-top: 10px;">
+          <div class="row">
+            <div class="col txtfiltros">
+              Precio</div> </div>
+              <div class="block-title display-flex justify-content-space-between">Price Filter <span class="price-value">$200 - $400</span></div>
+              <div class="list simple-list">
+                <ul>
+                  <li class="item-row">
+                    <div class="item-cell width-auto flex-shrink-0">
+                      <i class="icon f7-icons if-not-md">money_dollar_round</i>
+                      <i class="icon material-icons md-only">attach_money</i>
+                    </div>
+                    <div class="item-cell item-cell-shrink-3">
+                      <!-- Dual range slider with all the parameters passed via data- attributes -->
+                      <div
+                        id="price-filter"
+                        class="range-slider range-slider-init color-green"
+                        data-label="true"
+                        data-dual="true"
+                        data-min="0"
+                        data-max="500"
+                        data-step="1"
+                        data-value-left="200"
+                        data-value-right="400"
+                      ></div>
+                    </div>
+                    <div class="item-cell width-auto flex-shrink-0">
+                      <i class="icon f7-icons if-not-md">money_dollar_round_fill</i>
+                      <i class="icon material-icons md-only">monetization_on</i>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+        </div>
+        <!-- Panel Ordenar-->
+        <div class="block elevation-3" style="margin-top: 10px;">
+          <div class="row">
+            <div class="col txtfiltros">
+              Ordenar</div> </div>
+              <div class="list" style="margin-top: 5px; margin-left: 40px;">
+                <ul>
+                  <li>
+                    <label class="item-radio item-radio-icon-start item-content">
+                      <input type="radio" name="demo-radio-start" value="Precio mas bajo"/>
+                      <i class="icon icon-radio"></i>
+                      <div class="item-inner">
+                        <div class="item-title filtcateg">Precio mas bajo</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
+                      <input type="radio" name="demo-radio-start" value="Precio mas alto"/>
+                      <i class="icon icon-radio"></i>
+                      <div class="item-inner">
+                        <div class="item-title filtcateg">Precio mas alto</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
+                      <input type="radio" name="demo-radio-start" value="Mas recientes"/>
+                      <i class="icon icon-radio"></i>
+                      <div class="item-inner">
+                        <div class="item-title filtcateg">Mas recientes</div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+        
+
+        </div>
+        <div class="row">
+          <button class="boton">Aplicar filtros</button>
+        </div>
+
+          </div>
+
+      <div class="title" href="/home/" style="margin-left: 15px;">Hoop</div>
       
   </div>
   <div class="right">
@@ -76,22 +402,22 @@
       </button>
 
       <button class="col-33 elevation-3 marca" onclick="setMarca('MassimoDutti')">
-        <img src="../img/logos/massimo-dutti-1.svg" style="width: 98px;height: 35px;">
+        <img src="../img/logos/massimo-dutti-1.svg" style="width: 98px;height: 35px; position: relative; right: 8px;">
       </button>
 
   </div>
   <div class="row">
     
      <button class="col-33 elevation-3 marca" style="margin-top: 15px;" onclick="setMarca('Pull&Bear')">
-      <img src="../img/logos/pull-bear-2.svg" style="width: 88px; height: 35px;"> 
+      <img src="../img/logos/pull-bear-2.svg" style="width: 88px; height: 35px; position: relative; right: 3px;"> 
      </button>
     
     <button class="col-33 elevation-3 marca" style="margin-top: 15px;" onclick="setMarca('Oysho')">
-      <img src="../img/logos/oysho-1.svg" style="width: 87px;height: 35px;">
+      <img src="../img/logos/oysho-1.svg" style="width: 87px;height: 35px; position: relative; right: 3px;">
     </button>
 
     <button class="col-33 elevation-3 marca" style="margin-top: 15px;" onclick="setMarca('Stradivarius')">
-      <img src="../img/logos/stradivarius-1.svg" style="width: 90px;height: 35px;">
+      <img src="../img/logos/stradivarius-1.svg" style="width: 90px;height: 35px; position: relative; right: 4px;">
     </button>
   </div>
 </div>
