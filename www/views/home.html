@@ -21,7 +21,7 @@
         </div>
         
 
-          <!-- Panel Filtro Categoria -->
+          <!-- Panel Filtro Categoria (Detalle) -->
           <div class="block elevation-3" style="margin-top: 10px;">
             <div class="row">
               <div class="col txtfiltros">
@@ -32,7 +32,7 @@
               <ul>
                 <li>
                   <label class="item-radio item-radio-icon-start item-content">
-                    <input type="radio" name="demo-radio-start" value="Tops" />
+                    <input type="radio" name="demo-radio-start" value="Tops" onclick="setDetalleFiltro('Tops')"/>
                     <i class="icon icon-radio"></i>
                     <div class="item-inner">
                       <div class="item-title filtcateg">Tops</div>
@@ -41,7 +41,7 @@
                 </li>
                 <li>
                   <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
-                    <input type="radio" name="demo-radio-start" value="Vestidos" />
+                    <input type="radio" name="demo-radio-start" value="Vestidos" onclick="setDetalleFiltro('Vestidos')"/>
                     <i class="icon icon-radio"></i>
                     <div class="item-inner">
                       <div class="item-title filtcateg">Vestidos</div>
@@ -50,7 +50,7 @@
                 </li>
                 <li>
                   <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
-                    <input type="radio" name="demo-radio-start" value="Pantalones"  />
+                    <input type="radio" name="demo-radio-start" value="Pantalones" onclick="setDetalleFiltro('Pantalones')"/>
                     <i class="icon icon-radio"></i>
                     <div class="item-inner">
                       <div class="item-title filtcateg">Pantalones</div>
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
-                    <input type="radio" name="demo-radio-start" value="Chaquetas & Abrigos" />
+                    <input type="radio" name="demo-radio-start" value="Chaquetas & Abrigos" onclick="setDetalleFiltro('Chaquetas & Abrigos')"/>
                     <i class="icon icon-radio"></i>
                     <div class="item-inner">
                       <div class="item-title filtcateg">Chaquetas & Abrigos</div>
@@ -68,7 +68,7 @@
                 </li>
                 <li>
                   <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
-                    <input type="radio" name="demo-radio-start" value="Faldas" />
+                    <input type="radio" name="demo-radio-start" value="Faldas" onclick="setDetalleFiltro('Faldas')"/>
                     <i class="icon icon-radio"></i>
                     <div class="item-inner">
                       <div class="item-title filtcateg">Faldas</div>
@@ -77,7 +77,7 @@
                 </li>
                 <li>
                   <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
-                    <input type="radio" name="demo-radio-start" value="Zapatos" />
+                    <input type="radio" name="demo-radio-start" value="Zapatos" onclick="setDetalleFiltro('Zapatos')"/>
                     <i class="icon icon-radio"></i>
                     <div class="item-inner">
                       <div class="item-title filtcateg">Zapatos</div>
@@ -86,7 +86,7 @@
                 </li>
                 <li>
                   <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
-                    <input type="radio" name="demo-radio-start" value="Bolsas" />
+                    <input type="radio" name="demo-radio-start" value="Bolsas" onclick="setDetalleFiltro('Bolsas')"/>
                     <i class="icon icon-radio"></i>
                     <div class="item-inner">
                       <div class="item-title filtcateg">Bolsas</div>
@@ -95,7 +95,7 @@
                 </li>
                 <li>
                   <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
-                    <input type="radio" name="demo-radio-start" value="Accesorios" />
+                    <input type="radio" name="demo-radio-start" value="Accesorios" onclick="setDetalleFiltro('Accesorios')"/>
                     <i class="icon icon-radio"></i>
                     <div class="item-inner">
                       <div class="item-title filtcateg">Accesorios</div>
@@ -105,7 +105,7 @@
               </ul>
             </div>
             
-          </div> 
+          </div>  
            <!-- Panel Filtro Marcas -->
           <div class="block elevation-3" style="margin-top: 10px; padding-bottom: 12px;">
             <div class="row">
@@ -115,80 +115,80 @@
             </div>
             <div class="row" style="margin-top: 5px;">
     
-              <button class="col-33 elevation-3 marca2" onclick="setMarca('Zara')">
+              <button class="col-33 elevation-3 marca2" onclick="setMarcaFiltro('Zara')">
                 <img src="../img/logos/zara.svg" style="width: 66px; height: 26px;">
               </button>
               
-              <button class="col-33 elevation-3 marca2" onclick="setMarca('Bershka')">
+              <button class="col-33 elevation-3 marca2" onclick="setMarcaFiltro('Bershka')">
                 <img src="../img/logos/bershka-1.svg" style="width: 76px;height: 30px; position: relative; right: 3px;">
               </button>
         
-              <button class="col-33 elevation-3 marca2" onclick="setMarca('MassimoDutti')">
+              <button class="col-33 elevation-3 marca2" onclick="setMarcaFiltro('MassimoDutti')">
                 <img src="../img/logos/massimo-dutti-1.svg" style="width: 87px;height: 32px; position: relative; right: 8px;">
               </button>
         
           </div>
           <div class="row">
             
-             <button class="col-33 elevation-3 marca2" style="margin-top: 15px;" onclick="setMarca('Pull&Bear')">
+             <button class="col-33 elevation-3 marca2" style="margin-top: 15px;" onclick="setMarcaFiltro('Pull&Bear')">
               <img src="../img/logos/pull-bear-2.svg" style="width: 81px; height: 33px; position: relative; right: 5px;"> 
              </button>
             
-            <button class="col-33 elevation-3 marca2" style="margin-top: 15px;" onclick="setMarca('Oysho')">
+            <button class="col-33 elevation-3 marca2" style="margin-top: 15px;" onclick="setMarcaFiltro('Oysho')">
               <img src="../img/logos/oysho-1.svg" style="width: 79px;height: 30px; position: relative; right: 5px;">
             </button>
         
-            <button class="col-33 elevation-3 marca2" style="margin-top: 15px;" onclick="setMarca('Stradivarius')">
+            <button class="col-33 elevation-3 marca2" style="margin-top: 15px;" onclick="setMarcaFiltro('Stradivarius')">
               <img src="../img/logos/stradivarius-1.svg" style="width: 81px;height: 33px; position: relative; right: 5px;">
             </button>
           </div>
 
         </div> 
-         <!-- Panel Filtro Tallas -->
+         <!-- Panel Filtro Tallas 
          <div class="block elevation-3" style="margin-top: 10px; padding-bottom: 12px;">
           <div class="row">
             <div class="col txtfiltros">
               Tallas</div> </div>
               <div class="row txtfiltros" style="font-size: 14px;"> Superior</div>
               <div class="row" style="margin-top: 5px;">
-              <button class="col-15 elevation-3 tallab">XS</button> 
-              <button class="col-15 elevation-3 tallab">S</button> 
-              <button class="col-15 elevation-3 tallab">M</button> 
-              <button class="col-15 elevation-3 tallab">L</button> 
-              <button class="col-15 elevation-3 tallab">XL</button> 
-              <button class="col-15 elevation-3 tallab">XXL</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla XS')">XS</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla S')">S</button> 
+              <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla M')">M</button> 
+              <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla L')">L</button> 
+              <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla XL')">XL</button> 
+              <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla XXL')">XXL</button> 
             </div>
 
             <div class="row txtfiltros" style="font-size: 14px; margin-top: 15px;"> Inferior</div>
               <div class="row" style="margin-top: 5px;">
-              <button class="col-15 elevation-3 tallab">XS</button> 
-              <button class="col-15 elevation-3 tallab">S</button> 
-              <button class="col-15 elevation-3 tallab">M</button> 
-              <button class="col-15 elevation-3 tallab">L</button> 
-              <button class="col-15 elevation-3 tallab">XL</button> 
-              <button class="col-15 elevation-3 tallab">XXL</button> 
+                <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla XS')">XS</button> 
+                <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla S')">S</button> 
+                <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla M')">M</button> 
+                <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla L')">L</button> 
+                <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla XL')">XL</button> 
+                <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla XXL')">XXL</button>  
             </div>
 
             <div class="row txtfiltros" style="font-size: 14px;  margin-top: 15px;"> Calzado</div>
               <div class="row" style="margin-top: 5px;">
-              <button class="col-15 elevation-3 tallab">2</button> 
-              <button class="col-15 elevation-3 tallab">2.5</button> 
-              <button class="col-15 elevation-3 tallab">3</button> 
-              <button class="col-15 elevation-3 tallab">3.5</button> 
-              <button class="col-15 elevation-3 tallab">4</button> 
-              <button class="col-15 elevation-3 tallab">4.5</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 22')">2</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 22.5')">2.5</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 23')">3</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 23.5')">3.5</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 24')">4</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 24.5')">4.5</button> 
             </div>
             <div class="row" style="margin-top: 10px;">
-              <button class="col-15 elevation-3 tallab">5</button> 
-              <button class="col-15 elevation-3 tallab">5.5</button> 
-              <button class="col-15 elevation-3 tallab">6</button> 
-              <button class="col-15 elevation-3 tallab">6.5</button> 
-              <button class="col-15 elevation-3 tallab">7</button> 
-              <button class="col-15 elevation-3 tallab">7.5</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 25')">5</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 25.5')">5.5</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 26')">6</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 26.5')">6.5</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 27')">7</button> 
+              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 27.5')">7.5</button> 
             </div>
-        </div> 
+        </div>  -->
 
-        <!-- Panel Filtro Condicion-->
+        <!-- Panel Filtro Condicion 
         <div class="block elevation-3" style="margin-top: 10px;">
           <div class="row">
             <div class="col txtfiltros">
@@ -197,7 +197,7 @@
                 <ul>
                   <li>
                     <label class="item-radio item-radio-icon-start item-content">
-                      <input type="radio" name="demo-radio-start" value="Nuevo con etiqueta"/>
+                      <input type="radio" name="demo-radio-start" value="Nuevo con etiqueta" onclick="setCondicionFiltro('Nuevo con etiqueta')"/>
                       <i class="icon icon-radio"></i>
                       <div class="item-inner">
                         <div class="item-title filtcateg">Nuevo con etiqueta</div>
@@ -206,7 +206,7 @@
                   </li>
                   <li>
                     <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
-                      <input type="radio" name="demo-radio-start" value="Nuevo sin etiqueta"/>
+                      <input type="radio" name="demo-radio-start" value="Nuevo sin etiqueta" onclick="setCondicionFiltro('Nuevo sin etiqueta')"/>
                       <i class="icon icon-radio"></i>
                       <div class="item-inner">
                         <div class="item-title filtcateg">Nuevo sin etiqueta</div>
@@ -215,7 +215,7 @@
                   </li>
                   <li>
                     <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
-                      <input type="radio" name="demo-radio-start" value="En perfecto estado"/>
+                      <input type="radio" name="demo-radio-start" value="En perfecto estado" onclick="setCondicionFiltro('En perfecto estado')"/>
                       <i class="icon icon-radio"></i>
                       <div class="item-inner">
                         <div class="item-title filtcateg">En perfecto estado</div>
@@ -224,7 +224,7 @@
                   </li>
                   <li>
                     <label class="item-radio item-radio-icon-start item-content" style="margin-top: -12px;">
-                      <input type="radio" name="demo-radio-start" value="Pequeño defecto"/>
+                      <input type="radio" name="demo-radio-start" value="Pequeño defecto" onclick="setCondicionFiltro('Pequeño defecto')"/>
                       <i class="icon icon-radio"></i>
                       <div class="item-inner">
                         <div class="item-title filtcateg">Pequeño defecto</div>
@@ -233,35 +233,35 @@
                   </li>
                 </ul>
               </div>
-        </div>
+        </div> -->
 
-        <!-- Panel Filtro Color-->
+        <!-- Panel Filtro Color 
         <div class="block elevation-3" style="margin-top: 10px; padding-bottom: 12px;">
           <div class="row">
             <div class="col txtfiltros">
               Color</div> </div>
               <div class="row" style="margin-top: 5px;">
-              <button class="col-15 colorb" style="background-color: red;"></button> 
-              <button class="col-15 colorb" style="background-color: blue;"></button> 
-              <button class="col-15 colorb" style="background-color: yellow;"></button> 
-              <button class="col-15 colorb" style="background-color: green;"></button> 
-              <button class="col-15 colorb" style="background-color: orange;"></button> 
-              <button class="col-15 colorb" style="background-color: purple;"></button> 
+              <button class="col-15 colorb" style="background-color: red;" onclick="setColorFiltro('Rojo')"></button> 
+              <button class="col-15 colorb" style="background-color: blue;" onclick="setColorFiltro('Azul')"></button> 
+              <button class="col-15 colorb" style="background-color: yellow;" onclick="setColorFiltro('Amarillo')"></button> 
+              <button class="col-15 colorb" style="background-color: green;" onclick="setColorFiltro('Verde')"></button> 
+              <button class="col-15 colorb" style="background-color: orange;" onclick="setColorFiltro('Naranja')"></button> 
+              <button class="col-15 colorb" style="background-color: purple;" onclick="setColorFiltro('Morado')"></button> 
             
             </div>
             <div class="row" style="margin-top: 10px;">
-              <button class="col-15 colorb" style="background-color: black;"></button> 
-              <button class="col-15 colorb" style="background-color: gold;"></button>
-              <button class="col-15 colorb" style="background-color:  gray;"></button>
-              <button class="col-15 colorb" style="background-color: brown;"></button>
-              <button class="col-15 colorb" style="background-color: pink;"></button>
-              <button class="col-15 colorb" style="background-color: white; border: 1px solid black;"></button>
+              <button class="col-15 colorb" style="background-color: black;" onclick="setColorFiltro('Negro')"></button> 
+              <button class="col-15 colorb" style="background-color: gold;" onclick="setColorFiltro('Dorado')"></button>
+              <button class="col-15 colorb" style="background-color:  gray;" onclick="setColorFiltro('Gris')"></button>
+              <button class="col-15 colorb" style="background-color: brown;" onclick="setColorFiltro('Cafe')"></button>
+              <button class="col-15 colorb" style="background-color: pink;" onclick="setColorFiltro('Rosa')"></button>
+              <button class="col-15 colorb" style="background-color: white; border: 1px solid black;" onclick="setColorFiltro('Blanco')"></button>
               
             </div>
 
-        </div>
+        </div> -->
 
-        <!-- Panel Filtro Precio-->
+        <!-- Panel Filtro Precio
         <div class="block elevation-3" style="margin-top: 10px;">
           <div class="row">
             <div class="col txtfiltros">
@@ -274,8 +274,8 @@
                       <i class="icon f7-icons if-not-md">money_dollar_round</i>
                       <i class="icon material-icons md-only">attach_money</i>
                     </div>
-                    <div class="item-cell item-cell-shrink-3">
-                      <!-- Dual range slider with all the parameters passed via data- attributes -->
+                    <div class="item-cell item-cell-shrink-3"> -->
+                     <!-- Dual range slider with all the parameters passed via data- attributes 
                       <div
                         id="price-filter"
                         class="range-slider range-slider-init color-green"
@@ -296,8 +296,8 @@
                 </ul>
               </div>
 
-        </div>
-        <!-- Panel Ordenar-->
+        </div> -->
+        <!-- Panel Ordenar
         <div class="block elevation-3" style="margin-top: 10px;">
           <div class="row">
             <div class="col txtfiltros">
@@ -335,9 +335,9 @@
               </div>
         
 
-        </div>
+        </div> -->
         <div class="row">
-          <button class="boton">Aplicar filtros</button>
+          <button class="boton panel-close" onclick="AplicarFiltros()">Aplicar filtros</button>
         </div>
 
           </div>

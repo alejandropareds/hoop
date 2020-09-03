@@ -1,11 +1,12 @@
 var $$ = Dom7;
 
 var marca2 ="";
-var talla="";
-var precio="";
+var talla2="";
+var precio2="";
 var categoria2 ="";
-var condicion="";
-var color="";
+var detalle2 ="";
+var condicion2="";
+var color2="";
 var token="";
 var platform = "";
 
@@ -455,23 +456,83 @@ function Registrarse(){
   }
   function setMarca(marca){
     categoria2="";
-    talla="";
-    precio="";
-    condicion="";
-    color="";
+    detalle2="";
+    talla2="";
+    precio2="";
+    condicion2="";
+    color2="";
 
     marca2 = marca;
 
     mainView.router.navigate('/productos/',{animate:true});
   }
 
+  function setDetalleFiltro(detalle){
+    categoria2="";
+    marca2="";
+    talla2="";
+    precio2="";
+    condicion2="";
+    color2="";
+
+    detalle2=detalle;
+  }
+  function setMarcaFiltro(marca){
+    categoria2="";
+    detalle2="";
+    talla2="";
+    precio2="";
+    condicion2="";
+    color2="";
+
+    marca2 = marca;
+
+  }
+
+  function setTallaFiltro(talla){
+    categoria2="";
+    detalle2="";
+    precio2="";
+    condicion2="";
+    color2="";
+    marca2="";
+
+    talla2= talla;
+  }
+
+  function setCondicionFiltro(condicion){
+    categoria2="";
+    detalle2="";
+    precio2="";
+    color2="";
+    marca2="";
+    talla2="";
+
+    condicion2=condicion;
+  }
+
+  function setColorFiltro(color){
+    categoria2="";
+    detalle2="";
+    precio2="";
+    marca2="";
+    talla2="";
+    condicion2="";
+
+    color2=color;
+  }
+  function AplicarFiltros() {
+    mainView.router.navigate('/productos/',{animate:true});
+  }
+
   function setCategoria(categoria){
 
-    marca="";
-    talla="";
-    precio="";
-    condicion="";
-    color="";
+    marca2="";
+    detalle2="";
+    talla2="";
+    precio2="";
+    condicion2="";
+    color2="";
 
     categoria2 = categoria;
 
@@ -490,7 +551,7 @@ function Registrarse(){
   
     app7.request({
       url: 'https://hoopbazar.com/api/filtros.php',
-      data:{marca:marca2,talla:talla,precio:precio,categoria:categoria2,condicion:condicion,color:color},
+      data:{marca:marca2,talla:talla2,precio:precio2,categoria:categoria2,detalle:detalle2,condicion:condicion2,color:color2},
       method:'POST',
       crossDomain: true,
       success:function(data){
@@ -534,7 +595,7 @@ function Registrarse(){
     $$('#productos').html("");
 
     app7.request({
-      url: 'https://hoopbazar.com/api/filtros.php',
+      url: 'https://localhost/hoop/api/filtros.php',
       data:{marca:marca},
       method:'POST',
       crossDomain: true,
