@@ -481,6 +481,77 @@ function Registrarse(){
     detalle2=detalle;
   }
   function setMarcaFiltro(marca){
+
+    
+    switch(marca){
+
+      case "Zara":
+        
+       
+         $$('#Zara').attr("class","col button button-fill marca2press elevation-24");
+         $$('#Bershka').attr("class","col button button-outline marca2 elevation-3");
+         $$('#MassimoDutti').attr("class","col button button-outline marca2 elevation-3");
+         $$('#Pull&Bear').attr("class","col button button-outline marca2 elevation-3");
+         $$('#Oysho').attr("class","col button button-outline marca2 elevation-3");
+         $$('#Stradivarius').attr("class","col button button-outline marca2 elevation-3");
+      break; 
+    
+      case "Bershka":
+        
+       
+        $$('#Bershka').attr("class","col button button-fill marca2press elevation-24");
+        $$('#Zara').attr("class","col button button-outline marca2 elevation-3");
+        $$('#MassimoDutti').attr("class","col button button-outline marca2 elevation-3");
+        $$('#Pull&Bear').attr("class","col button button-outline marca2 elevation-3");
+        $$('#Oysho').attr("class","col button button-outline marca2 elevation-3");
+        $$('#Stradivarius').attr("class","col button button-outline marca2 elevation-3");
+     break;
+
+     case "MassimoDutti":
+        
+       
+        $$('#MassimoDutti').attr("class","col button button-fill marca2press elevation-24");
+        $$('#Zara').attr("class","col button button-outline marca2 elevation-3");
+        $$('#Bershka').attr("class","col button button-outline marca2 elevation-3");
+        $$('#Pull&Bear').attr("class","col button button-outline marca2 elevation-3");
+        $$('#Oysho').attr("class","col button button-outline marca2 elevation-3");
+        $$('#Stradivarius').attr("class","col button button-outline marca2 elevation-3");
+     break;
+
+     case "Pull&Bear":
+        
+       
+        $$('#Pull&Bear').attr("class","col button button-fill marca2press elevation-24");
+        $$('#Zara').attr("class","col button button-outline marca2 elevation-3");
+        $$('#Bershka').attr("class","col button button-outline marca2 elevation-3");
+        $$('#MassimoDutti').attr("class","col button button-outline marca2 elevation-3");
+        $$('#Oysho').attr("class","col button button-outline marca2 elevation-3");
+        $$('#Stradivarius').attr("class","col button button-outline marca2 elevation-3");
+     break;
+
+     case "Oysho":
+        
+       
+      $$('#Oysho').attr("class","col button button-fill marca2press elevation-24");
+      $$('#Zara').attr("class","col button button-outline marca2 elevation-3");
+      $$('#Bershka').attr("class","col button button-outline marca2 elevation-3");
+      $$('#MassimoDutti').attr("class","col button button-outline marca2 elevation-3");
+      $$('#Pull&Bear').attr("class","col button button-outline marca2 elevation-3");
+      $$('#Stradivarius').attr("class","col button button-outline marca2 elevation-3");
+   break;
+
+   case "Stradivarius":
+        
+       
+    $$('#Stradivarius').attr("class","col button button-fill marca2press elevation-24");
+    $$('#Zara').attr("class","col button button-outline marca2 elevation-3");
+    $$('#Bershka').attr("class","col button button-outline marca2 elevation-3");
+    $$('#MassimoDutti').attr("class","col button button-outline marca2 elevation-3");
+    $$('#Pull&Bear').attr("class","col button button-outline marca2 elevation-3");
+    $$('#Oysho').attr("class","col button button-outline marca2 elevation-3");
+ break;
+    }
+
     categoria2="";
     detalle2="";
     talla2="";
@@ -493,6 +564,406 @@ function Registrarse(){
   }
 
   function setTallaFiltro(talla){
+
+    switch(talla){
+
+      case "XS":
+       
+         $$('#XS').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "S":
+       
+         $$('#S').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "M":
+       
+         $$('#M').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "L":
+       
+         $$('#L').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "XL":
+       
+         $$('#XL').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "XXL":
+       
+         $$('#XXL').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "22":
+       
+         $$('#22').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "22medio":
+       
+         $$('#22medio').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "23":
+       
+         $$('#23').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "23medio":
+       
+         $$('#23medio').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "24":
+       
+         $$('#24').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "24medio":
+       
+         $$('#24medio').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "25":
+       
+         $$('#25').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "25medio":
+       
+         $$('#25medio').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "26":
+       
+         $$('#26').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#22.5').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "26medio":
+       
+         $$('#26medio').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "27":
+       
+         $$('#27').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+
+      case "27medio":
+       
+         $$('#27medio').attr("class","col button button-fill tallabpress elevation-24");
+         $$('#XS').attr("class","col button button-outline tallab elevation-3");
+         $$('#M').attr("class","col button button-outline tallab elevation-3");
+         $$('#S').attr("class","col button button-outline tallab elevation-3");
+         $$('#XL').attr("class","col button button-outline tallab elevation-3");
+         $$('#XXL').attr("class","col button button-outline tallab elevation-3");
+         $$('#22').attr("class","col button button-outline tallab elevation-3");
+         $$('#L').attr("class","col button button-outline tallab elevation-3");
+         $$('#23').attr("class","col button button-outline tallab elevation-3");
+         $$('#23medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#24').attr("class","col button button-outline tallab elevation-3");
+         $$('#24medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#25').attr("class","col button button-outline tallab elevation-3");
+         $$('#25medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#26').attr("class","col button button-outline tallab elevation-3");
+         $$('#26medio').attr("class","col button button-outline tallab elevation-3");
+         $$('#27').attr("class","col button button-outline tallab elevation-3");
+         $$('#22medio').attr("class","col button button-outline tallab elevation-3");
+      break; 
+    }
     categoria2="";
     detalle2="";
     precio2="";
@@ -515,6 +986,213 @@ function Registrarse(){
   }
 
   function setColorFiltro(color){
+
+    switch(color){
+
+      case "Rojo":
+        
+       
+         $$('#Rojo').attr("class","col button button-fill colorbpress elevation-24 redb");
+         $$('#Azul').attr("class","col button button-outline colorb elevation-3 azulb");
+         $$('#Amarillo').attr("class","col button button-outline colorb amarillob elevation-3");
+         $$('#Verde').attr("class","col button button-outline colorb verdeb elevation-3");
+         $$('#Naranja').attr("class","col button button-outline colorb naranjab elevation-3");
+         $$('#Morado').attr("class","col button button-outline colorb moradob elevation-3");
+         $$('#Negro').attr("class","col button button-outline colorb negrob elevation-3");
+         $$('#Dorado').attr("class","col button button-outline colorb doradob elevation-3");
+         $$('#Gris').attr("class","col button button-outline colorb grisb elevation-3");
+         $$('#Cafe').attr("class","col button button-outline colorb cafeb elevation-3");
+         $$('#Rosa').attr("class","col button button-outline colorb rosab elevation-3");
+         $$('#Blanco').attr("class","col button button-outline colorb blancob elevation-3");
+      break; 
+
+      case "Azul":
+        
+       
+         $$('#Azul').attr("class","col button button-fill colorbpress azulb  elevation-24");
+         $$('#Rojo').attr("class","col button button-outline colorb redb elevation-3");
+         $$('#Amarillo').attr("class","col button button-outline colorb amarillob elevation-3");
+         $$('#Verde').attr("class","col button button-outline colorb verdeb elevation-3");
+         $$('#Naranja').attr("class","col button button-outline colorb naranjab elevation-3");
+         $$('#Morado').attr("class","col button button-outline colorb moradob elevation-3");
+         $$('#Negro').attr("class","col button button-outline colorb negrob elevation-3");
+         $$('#Dorado').attr("class","col button button-outline colorb doradob elevation-3");
+         $$('#Gris').attr("class","col button button-outline colorb grisb elevation-3");
+         $$('#Cafe').attr("class","col button button-outline colorb cafeb elevation-3");
+         $$('#Rosa').attr("class","col button button-outline colorb rosab elevation-3");
+         $$('#Blanco').attr("class","col button button-outline colorb blancob elevation-3");
+      break; 
+
+      case "Amarillo":
+        
+       
+         $$('#Amarillo').attr("class","col button button-fill colorbpress  amarillob elevation-24");
+         $$('#Rojo').attr("class","col button button-outline colorb redb elevation-3");
+         $$('#Azul').attr("class","col button button-outline colorb azulb elevation-3");
+         $$('#Verde').attr("class","col button button-outline colorb verdeb elevation-3");
+         $$('#Naranja').attr("class","col button button-outline colorb naranjab elevation-3");
+         $$('#Morado').attr("class","col button button-outline colorb moradob elevation-3");
+         $$('#Negro').attr("class","col button button-outline colorb negrob elevation-3");
+         $$('#Dorado').attr("class","col button button-outline colorb doradob elevation-3");
+         $$('#Gris').attr("class","col button button-outline colorb grisb elevation-3");
+         $$('#Cafe').attr("class","col button button-outline colorb cafeb elevation-3");
+         $$('#Rosa').attr("class","col button button-outline colorb rosab elevation-3");
+         $$('#Blanco').attr("class","col button button-outline colorb blancob elevation-3");
+      break; 
+
+      case "Verde":
+        
+       
+         $$('#Verde').attr("class","col button button-fill colorbpress verdeb  elevation-24");
+         $$('#Rojo').attr("class","col button button-outline colorb redb elevation-3");
+         $$('#Azul').attr("class","col button button-outline colorb azulb elevation-3");
+         $$('#Amarillo').attr("class","col button button-outline colorb amarillob elevation-3");
+         $$('#Naranja').attr("class","col button button-outline colorb naranjab elevation-3");
+         $$('#Morado').attr("class","col button button-outline colorb moradob elevation-3");
+         $$('#Negro').attr("class","col button button-outline colorb negrob elevation-3");
+         $$('#Dorado').attr("class","col button button-outline colorb doradob elevation-3");
+         $$('#Gris').attr("class","col button button-outline colorb grisb elevation-3");
+         $$('#Cafe').attr("class","col button button-outline colorb cafeb elevation-3");
+         $$('#Rosa').attr("class","col button button-outline colorb rosab elevation-3");
+         $$('#Blanco').attr("class","col button button-outline colorb blancob elevation-3");
+      break; 
+
+      case "Naranja":
+        
+       
+         $$('#Naranja').attr("class","col button button-fill colorbpress naranjab  elevation-24");
+         $$('#Rojo').attr("class","col button button-outline colorb redb elevation-3");
+         $$('#Azul').attr("class","col button button-outline colorb azulb elevation-3");
+         $$('#Verde').attr("class","col button button-outline colorb verdeb elevation-3");
+         $$('#Amarillo').attr("class","col button button-outline colorb amarillob elevation-3");
+         $$('#Morado').attr("class","col button button-outline colorb moradob elevation-3");
+         $$('#Negro').attr("class","col button button-outline colorb negrob elevation-3");
+         $$('#Dorado').attr("class","col button button-outline colorb doradob elevation-3");
+         $$('#Gris').attr("class","col button button-outline colorb grisb elevation-3");
+         $$('#Cafe').attr("class","col button button-outline colorb cafeb elevation-3");
+         $$('#Rosa').attr("class","col button button-outline colorb rosab elevation-3");
+         $$('#Blanco').attr("class","col button button-outline colorb blancob elevation-3");
+      break; 
+
+      case "Morado":
+        
+       
+         $$('#Morado').attr("class","col button button-fill colorbpress moradob  elevation-24");
+         $$('#Rojo').attr("class","col button button-outline colorb redb elevation-3");
+         $$('#Azul').attr("class","col button button-outline colorb azulb elevation-3");
+         $$('#Verde').attr("class","col button button-outline colorb verdeb elevation-3");
+         $$('#Naranja').attr("class","col button button-outline colorb naranjab elevation-3");
+         $$('#Amarillo').attr("class","col button button-outline colorb amarillob elevation-3");
+         $$('#Negro').attr("class","col button button-outline colorb negrob elevation-3");
+         $$('#Dorado').attr("class","col button button-outline colorb doradob elevation-3");
+         $$('#Gris').attr("class","col button button-outline colorb grisb elevation-3");
+         $$('#Cafe').attr("class","col button button-outline colorb cafeb elevation-3");
+         $$('#Rosa').attr("class","col button button-outline colorb rosab elevation-3");
+         $$('#Blanco').attr("class","col button button-outline colorb blancob elevation-3");
+      break; 
+
+      case "Negro":
+        
+       
+         $$('#Negro').attr("class","col button button-fill colorbpress negrob  elevation-24");
+         $$('#Rojo').attr("class","col button button-outline colorb redb elevation-3");
+         $$('#Azul').attr("class","col button button-outline colorb azulb elevation-3");
+         $$('#Verde').attr("class","col button button-outline colorb verdeb elevation-3");
+         $$('#Naranja').attr("class","col button button-outline colorb naranjab elevation-3");
+         $$('#Morado').attr("class","col button button-outline colorb moradob elevation-3");
+         $$('#Amarillo').attr("class","col button button-outline colorb amarillob elevation-3");
+         $$('#Dorado').attr("class","col button button-outline colorb doradob elevation-3");
+         $$('#Gris').attr("class","col button button-outline colorb grisb elevation-3");
+         $$('#Cafe').attr("class","col button button-outline colorb cafeb elevation-3");
+         $$('#Rosa').attr("class","col button button-outline colorb rosab elevation-3");
+         $$('#Blanco').attr("class","col button button-outline colorb blancob elevation-3");
+      break; 
+
+      case "Dorado":
+        
+       
+         $$('#Dorado').attr("class","col button button-fill colorbpress doradob  elevation-24");
+         $$('#Rojo').attr("class","col button button-outline colorb redb elevation-3");
+         $$('#Azul').attr("class","col button button-outline colorb azulb elevation-3");
+         $$('#Verde').attr("class","col button button-outline colorb verdeb elevation-3");
+         $$('#Naranja').attr("class","col button button-outline colorb naranjab elevation-3");
+         $$('#Morado').attr("class","col button button-outline colorb moradob elevation-3");
+         $$('#Negro').attr("class","col button button-outline colorb negrob elevation-3");
+         $$('#Amarillo').attr("class","col button button-outline colorb amarillob elevation-3");
+         $$('#Gris').attr("class","col button button-outline colorb grisb elevation-3");
+         $$('#Cafe').attr("class","col button button-outline colorb cafeb elevation-3");
+         $$('#Rosa').attr("class","col button button-outline colorb rosab elevation-3");
+         $$('#Blanco').attr("class","col button button-outline colorb blancob elevation-3");
+      break; 
+
+      case "Gris":
+        
+       
+         $$('#Gris').attr("class","col button button-fill colorbpress grisb  elevation-24");
+         $$('#Rojo').attr("class","col button button-outline colorb redb elevation-3");
+         $$('#Azul').attr("class","col button button-outline colorb azulb elevation-3");
+         $$('#Verde').attr("class","col button button-outline colorb verdeb elevation-3");
+         $$('#Naranja').attr("class","col button button-outline colorb naranjab elevation-3");
+         $$('#Morado').attr("class","col button button-outline colorb moradob elevation-3");
+         $$('#Negro').attr("class","col button button-outline colorb negrob elevation-3");
+         $$('#Dorado').attr("class","col button button-outline colorb doradob elevation-3");
+         $$('#Amarillo').attr("class","col button button-outline colorb amarillob elevation-3");
+         $$('#Cafe').attr("class","col button button-outline colorb cafeb elevation-3");
+         $$('#Rosa').attr("class","col button button-outline colorb rosab elevation-3");
+         $$('#Blanco').attr("class","col button button-outline colorb blancob elevation-3");
+      break; 
+
+      case "Cafe":
+        
+       
+         $$('#Cafe').attr("class","col button button-fill colorbpress cafeb  elevation-24");
+         $$('#Rojo').attr("class","col button button-outline colorb redb elevation-3");
+         $$('#Azul').attr("class","col button button-outline colorb azulb elevation-3");
+         $$('#Verde').attr("class","col button button-outline colorb verdeb elevation-3");
+         $$('#Naranja').attr("class","col button button-outline colorb naranjab elevation-3");
+         $$('#Morado').attr("class","col button button-outline colorb moradob elevation-3");
+         $$('#Negro').attr("class","col button button-outline colorb negrob elevation-3");
+         $$('#Dorado').attr("class","col button button-outline colorb doradob elevation-3");
+         $$('#Gris').attr("class","col button button-outline colorb grisb elevation-3");
+         $$('#Amarillo').attr("class","col button button-outline colorb amarillob elevation-3");
+         $$('#Rosa').attr("class","col button button-outline colorb rosab elevation-3");
+         $$('#Blanco').attr("class","col button button-outline colorb blancob elevation-3");
+      break; 
+
+      case "Rosa":
+        
+       
+         $$('#Rosa').attr("class","col button button-fill colorbpress rosab  elevation-24");
+         $$('#Rojo').attr("class","col button button-outline colorb redb elevation-3");
+         $$('#Azul').attr("class","col button button-outline colorb azulb elevation-3");
+         $$('#Verde').attr("class","col button button-outline colorb verdeb elevation-3");
+         $$('#Naranja').attr("class","col button button-outline colorb naranjab elevation-3");
+         $$('#Morado').attr("class","col button button-outline colorb moradob elevation-3");
+         $$('#Negro').attr("class","col button button-outline colorb negrob elevation-3");
+         $$('#Dorado').attr("class","col button button-outline colorb doradob elevation-3");
+         $$('#Gris').attr("class","col button button-outline colorb grisb elevation-3");
+         $$('#Cafe').attr("class","col button button-outline colorb cafeb elevation-3");
+         $$('#Amarillo').attr("class","col button button-outline colorb amarillob elevation-3");
+         $$('#Blanco').attr("class","col button button-outline colorb blancob elevation-3");
+      break;
+
+      case "Blanco":
+        
+       
+        $$('#Blanco').attr("class","col button button-fill colorbpress blancob  elevation-24");
+        $$('#Rojo').attr("class","col button button-outline colorb redb elevation-3");
+        $$('#Azul').attr("class","col button button-outline colorb azulb elevation-3");
+        $$('#Verde').attr("class","col button button-outline colorb verdeb elevation-3");
+        $$('#Naranja').attr("class","col button button-outline colorb naranjab elevation-3");
+        $$('#Morado').attr("class","col button button-outline colorb moradob elevation-3");
+        $$('#Negro').attr("class","col button button-outline colorb negrob elevation-3");
+        $$('#Dorado').attr("class","col button button-outline colorb doradob elevation-3");
+        $$('#Gris').attr("class","col button button-outline colorb grisb elevation-3");
+        $$('#Cafe').attr("class","col button button-outline colorb cafeb elevation-3");
+        $$('#Rosa').attr("class","col button button-outline colorb rosab elevation-3");
+        $$('#Amarillo').attr("class","col button button-outline colorb amarillob elevation-3");
+     break;
+    }
     categoria2="";
     detalle2="";
     precio2="";

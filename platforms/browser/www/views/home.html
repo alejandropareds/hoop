@@ -115,30 +115,30 @@
             </div>
             <div class="row" style="margin-top: 5px;">
     
-              <button class="col-33 elevation-3 marca2 button-fill" onclick="setMarcaFiltro('Zara')">
+              <button class="col-33 elevation-3 marca2" id="Zara" onclick="setMarcaFiltro('Zara')">
                 <img src="../img/logos/zara.svg" style="width: 66px; height: 26px;">
               </button>
               
-              <button class="col-33 elevation-3 marca2" onclick="setMarcaFiltro('Bershka')">
+              <button class="col-33 elevation-3 marca2" id="Bershka" onclick="setMarcaFiltro('Bershka')">
                 <img src="../img/logos/bershka-1.svg" style="width: 76px;height: 30px; position: relative; right: 3px;">
               </button>
         
-              <button class="col-33 elevation-3 marca2" onclick="setMarcaFiltro('MassimoDutti')">
+              <button class="col-33 elevation-3 marca2" id="MassimoDutti" onclick="setMarcaFiltro('MassimoDutti')">
                 <img src="../img/logos/massimo-dutti-1.svg" style="width: 87px;height: 32px; position: relative; right: 8px;">
               </button>
         
           </div>
           <div class="row">
             
-             <button class="col-33 elevation-3 marca2" style="margin-top: 15px;" onclick="setMarcaFiltro('Pull&Bear')">
+             <button class="col-33 elevation-3 marca2" id="Pull&Bear" style="margin-top: 15px;" onclick="setMarcaFiltro('Pull&Bear')">
               <img src="../img/logos/pull-bear-2.svg" style="width: 81px; height: 33px; position: relative; right: 5px;"> 
              </button>
             
-            <button class="col-33 elevation-3 marca2" style="margin-top: 15px;" onclick="setMarcaFiltro('Oysho')">
+            <button class="col-33 elevation-3 marca2" id="Oysho" style="margin-top: 15px;" onclick="setMarcaFiltro('Oysho')">
               <img src="../img/logos/oysho-1.svg" style="width: 79px;height: 30px; position: relative; right: 5px;">
             </button>
         
-            <button class="col-33 elevation-3 marca2" style="margin-top: 15px;" onclick="setMarcaFiltro('Stradivarius')">
+            <button class="col-33 elevation-3 marca2" id="Stradivarius" style="margin-top: 15px;" onclick="setMarcaFiltro('Stradivarius')">
               <img src="../img/logos/stradivarius-1.svg" style="width: 81px;height: 33px; position: relative; right: 5px;">
             </button>
           </div>
@@ -149,42 +149,32 @@
           <div class="row">
             <div class="col txtfiltros">
               Tallas</div> </div>
-              <div class="row txtfiltros" style="font-size: 14px;"> Superior</div>
+              <div class="row txtfiltros" style="font-size: 14px;"> Ropa</div>
               <div class="row" style="margin-top: 5px;">
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla XS')">XS</button> 
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla S')">S</button> 
-              <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla M')">M</button> 
-              <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla L')">L</button> 
-              <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla XL')">XL</button> 
-              <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla XXL')">XXL</button> 
-            </div>
-
-            <div class="row txtfiltros" style="font-size: 14px; margin-top: 15px;"> Inferior</div>
-              <div class="row" style="margin-top: 5px;">
-                <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla XS')">XS</button> 
-                <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla S')">S</button> 
-                <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla M')">M</button> 
-                <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla L')">L</button> 
-                <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla XL')">XL</button> 
-                <button class="col-15 elevation-3 tallab"  onclick="setTallaFiltro('Talla XXL')">XXL</button>  
+              <button class="col-15 elevation-3 tallab" id="XS" onclick="setTallaFiltro('XS')">XS</button> 
+              <button class="col-15 elevation-3 tallab"  id="S" onclick="setTallaFiltro('S')">S</button> 
+              <button class="col-15 elevation-3 tallab"  id="M" onclick="setTallaFiltro('M')">M</button> 
+              <button class="col-15 elevation-3 tallab"  id="L" onclick="setTallaFiltro('L')">L</button> 
+              <button class="col-15 elevation-3 tallab"  id="XL" onclick="setTallaFiltro('XL')">XL</button> 
+              <button class="col-15 elevation-3 tallab"  id="XXL" onclick="setTallaFiltro('XXL')">XXL</button> 
             </div>
 
             <div class="row txtfiltros" style="font-size: 14px;  margin-top: 15px;"> Calzado</div>
               <div class="row" style="margin-top: 5px;">
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 22')">2</button> 
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 22.5')">2.5</button> 
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 23')">3</button> 
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 23.5')">3.5</button> 
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 24')">4</button> 
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 24.5')">4.5</button> 
+              <button class="col-15 elevation-3 tallab" id="22" onclick="setTallaFiltro('22')">2</button> 
+              <button class="col-15 elevation-3 tallab" id="22medio" onclick="setTallaFiltro('22medio')">2.5</button> 
+              <button class="col-15 elevation-3 tallab" id="23" onclick="setTallaFiltro('23')">3</button> 
+              <button class="col-15 elevation-3 tallab" id="23medio" onclick="setTallaFiltro('23medio')">3.5</button> 
+              <button class="col-15 elevation-3 tallab" id="24" onclick="setTallaFiltro('24')">4</button> 
+              <button class="col-15 elevation-3 tallab" id="24medio" onclick="setTallaFiltro('24medio')">4.5</button> 
             </div>
             <div class="row" style="margin-top: 10px;">
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 25')">5</button> 
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 25.5')">5.5</button> 
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 26')">6</button> 
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 26.5')">6.5</button> 
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 27')">7</button> 
-              <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 27.5')">7.5</button> 
+              <button class="col-15 elevation-3 tallab" id="25" onclick="setTallaFiltro('25')">5</button> 
+              <button class="col-15 elevation-3 tallab" id="25medio" onclick="setTallaFiltro('25medio')">5.5</button> 
+              <button class="col-15 elevation-3 tallab" id="26" onclick="setTallaFiltro('26')">6</button> 
+              <button class="col-15 elevation-3 tallab" id="26medio" onclick="setTallaFiltro('26medio')">6.5</button> 
+              <button class="col-15 elevation-3 tallab" id="27" onclick="setTallaFiltro('27')">7</button> 
+              <button class="col-15 elevation-3 tallab" id="27medio" onclick="setTallaFiltro('27medio')">7.5</button> 
             </div>
         </div> 
 
@@ -241,21 +231,21 @@
             <div class="col txtfiltros">
               Color</div> </div>
               <div class="row" style="margin-top: 5px;">
-              <button class="col-15 colorb" style="background-color: red;" onclick="setColorFiltro('Rojo')"></button> 
-              <button class="col-15 colorb" style="background-color: blue;" onclick="setColorFiltro('Azul')"></button> 
-              <button class="col-15 colorb" style="background-color: yellow;" onclick="setColorFiltro('Amarillo')"></button> 
-              <button class="col-15 colorb" style="background-color: green;" onclick="setColorFiltro('Verde')"></button> 
-              <button class="col-15 colorb" style="background-color: orange;" onclick="setColorFiltro('Naranja')"></button> 
-              <button class="col-15 colorb" style="background-color: purple;" onclick="setColorFiltro('Morado')"></button> 
+              <button class="col-15 colorb redb elevation-3" id="Rojo" onclick="setColorFiltro('Rojo')"></button> 
+              <button class="col-15 colorb azulb elevation-3" id="Azul"  onclick="setColorFiltro('Azul')"></button> 
+              <button class="col-15 colorb amarillob elevation-3" id="Amarillo" onclick="setColorFiltro('Amarillo')"></button> 
+              <button class="col-15 colorb verdeb elevation-3" id="Verde" onclick="setColorFiltro('Verde')"></button> 
+              <button class="col-15 colorb naranjab elevation-3" id="Naranja" onclick="setColorFiltro('Naranja')"></button> 
+              <button class="col-15 colorb moradob elevation-3" id="Morado" onclick="setColorFiltro('Morado')"></button> 
             
             </div>
             <div class="row" style="margin-top: 10px;">
-              <button class="col-15 colorb" style="background-color: black;" onclick="setColorFiltro('Negro')"></button> 
-              <button class="col-15 colorb" style="background-color: gold;" onclick="setColorFiltro('Dorado')"></button>
-              <button class="col-15 colorb" style="background-color:  gray;" onclick="setColorFiltro('Gris')"></button>
-              <button class="col-15 colorb" style="background-color: brown;" onclick="setColorFiltro('Cafe')"></button>
-              <button class="col-15 colorb" style="background-color: pink;" onclick="setColorFiltro('Rosa')"></button>
-              <button class="col-15 colorb" style="background-color: white; border: 1px solid black;" onclick="setColorFiltro('Blanco')"></button>
+              <button class="col-15 colorb negrob elevation-3" id="Negro" onclick="setColorFiltro('Negro')"></button> 
+              <button class="col-15 colorb doradob elevation-3" id="Dorado" onclick="setColorFiltro('Dorado')"></button>
+              <button class="col-15 colorb grisb elevation-3" id="Gris" onclick="setColorFiltro('Gris')"></button>
+              <button class="col-15 colorb cafeb elevation-3" id="Cafe" onclick="setColorFiltro('Cafe')"></button>
+              <button class="col-15 colorb rosab elevation-3" id="Rosa" onclick="setColorFiltro('Rosa')"></button>
+              <button class="col-15 colorb blancob elevation-3" id="Blanco" onclick="setColorFiltro('Blanco')"></button>
               
             </div>
 

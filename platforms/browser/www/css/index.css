@@ -236,10 +236,32 @@ float: left;
   height: 55px;
   padding: 9px;
   border: none;
+  background-color: #f2f2f2;
 }
 
-.tallab {
+.marca2press{
+  height: 55px;
+  padding: 9px;
+  border: none;
+  background-color: rgb(245, 241, 241);
+}
 
+.tallab { border: none;
+  background-color: #f2f2f2;
+  color: black;
+  height: 32px;
+  width: 45px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.tallabpress { border: none;
+  background-color: rgb(245, 241, 241);
+  color: black;
+  height: 32px;
+  width: 45px;
+  text-align: center;
+  font-size: 12px;
 }
 
 .colorb{
@@ -247,6 +269,26 @@ float: left;
   height: 28px;
   border: none;
 }
+
+.colorbpress{
+  border-radius: 50%;
+  height: 28px;
+  border: 2px solid rgb(75, 65, 65);
+}
+
+.redb{ background-color: red;}
+.azulb{ background-color: blue;}
+.amarillob{ background-color:yellow;}
+.verdeb{ background-color: green;}
+.naranjab{ background-color: orange;}
+.moradob{ background-color: purple;}
+.negrob{ background-color: black;}
+.doradob{ background-color: gold;}
+.grisb{ background-color: gray;}
+.cafeb{ background-color: brown;}
+.rosab{ background-color: pink;}
+.blancob{ background-color: white;
+           }
 
 .categoria {
   border-radius: 50%;
