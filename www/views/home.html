@@ -9,7 +9,7 @@
 
         <!-- Panel Filtros-->
         <i class="f7-icons size-22 panel-open" href="#" data-panel=".panel-left" style="margin-left: 10px;">text_alignleft</i>
-        <div class="panel panel-left panel-cover panel-resizable panel-init" style="width: 100%;">
+        <div class="panel panel-left panel-cover panel-resizable panel-init" style="width: 100%; overflow-y: scroll;">
           <div class="row"> 
             <div class="col" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px; text-align: center; color: #5E6066; margin-top: 18px;"> 
             
@@ -115,7 +115,7 @@
             </div>
             <div class="row" style="margin-top: 5px;">
     
-              <button class="col-33 elevation-3 marca2" onclick="setMarcaFiltro('Zara')">
+              <button class="col-33 elevation-3 marca2 button-fill" onclick="setMarcaFiltro('Zara')">
                 <img src="../img/logos/zara.svg" style="width: 66px; height: 26px;">
               </button>
               
@@ -144,7 +144,7 @@
           </div>
 
         </div> 
-         <!-- Panel Filtro Tallas 
+         <!-- Panel Filtro Tallas  -->
          <div class="block elevation-3" style="margin-top: 10px; padding-bottom: 12px;">
           <div class="row">
             <div class="col txtfiltros">
@@ -186,9 +186,9 @@
               <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 27')">7</button> 
               <button class="col-15 elevation-3 tallab" onclick="setTallaFiltro('Talla 27.5')">7.5</button> 
             </div>
-        </div>  -->
+        </div> 
 
-        <!-- Panel Filtro Condicion 
+        <!-- Panel Filtro Condicion -->
         <div class="block elevation-3" style="margin-top: 10px;">
           <div class="row">
             <div class="col txtfiltros">
@@ -233,9 +233,9 @@
                   </li>
                 </ul>
               </div>
-        </div> -->
+        </div> 
 
-        <!-- Panel Filtro Color 
+        <!-- Panel Filtro Color -->
         <div class="block elevation-3" style="margin-top: 10px; padding-bottom: 12px;">
           <div class="row">
             <div class="col txtfiltros">
@@ -259,9 +259,9 @@
               
             </div>
 
-        </div> -->
+        </div> 
 
-        <!-- Panel Filtro Precio
+        <!-- Panel Filtro Precio -->
         <div class="block elevation-3" style="margin-top: 10px;">
           <div class="row">
             <div class="col txtfiltros">
@@ -274,8 +274,8 @@
                       <i class="icon f7-icons if-not-md">money_dollar_round</i>
                       <i class="icon material-icons md-only">attach_money</i>
                     </div>
-                    <div class="item-cell item-cell-shrink-3"> -->
-                     <!-- Dual range slider with all the parameters passed via data- attributes 
+                    <div class="item-cell item-cell-shrink-3"> 
+                     <!-- Dual range slider with all the parameters passed via data- attributes -->
                       <div
                         id="price-filter"
                         class="range-slider range-slider-init color-green"
@@ -296,8 +296,8 @@
                 </ul>
               </div>
 
-        </div> -->
-        <!-- Panel Ordenar
+        </div> 
+        <!-- Panel Ordenar -->
         <div class="block elevation-3" style="margin-top: 10px;">
           <div class="row">
             <div class="col txtfiltros">
@@ -335,7 +335,7 @@
               </div>
         
 
-        </div> -->
+        </div> 
         <div class="row">
           <button class="boton panel-close" onclick="AplicarFiltros()">Aplicar filtros</button>
         </div>

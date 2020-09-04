@@ -10,6 +10,7 @@ var color2="";
 var token="";
 var platform = "";
 
+
 var app = {
   // Application Constructor
   initialize: function() {
@@ -318,8 +319,10 @@ function Registrarse(){
           $$('#imagen2-producto').html('<img src="'+objson.data.imagen2+'" width="100%"/>');
           $$('#imagen3-producto').html('<img src="'+objson.data.imagen3+'" width="100%"/>');  
   
-         // $$('#favorito-producto').append(id);
-        
+         $$('#favorito-producto').attr("onclick","Favorito("+idproducto+")");
+
+         
+
         },
         error:function(error){
   
@@ -629,7 +632,7 @@ function Registrarse(){
 function ValidaUsuario(){
   var correo = localStorage.getItem('correo');
 
-  if(correo!="null"){
+  if(correo!=""){
     return true;
   }
   else{
@@ -640,11 +643,13 @@ function ValidaUsuario(){
 
 function Favorito(id){
 
+  alert(id);
+
   if (ValidaUsuario()){
 
 
   var producto = id;
-  var usuario = localStorage.getItem('correo');
+  var correo = localStorage.getItem('correo');
   
 
 
@@ -654,6 +659,8 @@ function Favorito(id){
     method:'POST',
     crossDomain: true,
     success:function(resultado){
+
+      alert(resultado);
 
       var objson = JSON.parse(resultado);
 
