@@ -263,7 +263,14 @@ function Registrarse(){
   
     });
 
+  
+
   $$(document).on('page:init','.page[data-name="home"]',function(e){
+
+    $$('#price-filter').on('range:change', function (e) {
+      var range = app7.range.get(e.target);
+      $$('.price-value').text('$'+(range.value[0])+' - $'+(range.value[1]));
+    });
 
   //alert("alerta");
   getPromo();
@@ -335,6 +342,7 @@ function Registrarse(){
     $$(document).on('page:init','.page[data-name="perfil"]',function(e){
   
       getPromo3();
+      getFavoritos();
     });
   function getPromo(){
   
@@ -1261,7 +1269,43 @@ function Registrarse(){
 
   }
  
+  function getFavoritos(){
+
+    var correo = localStorage.getItem('correo');
+
+    app7.preloader.show('blue');
+    $$('#productos').html("");
   
+    app7.request({
+      url: 'http://localhost/hoop/api/favorito.php',
+      data:{correo:correo},
+      method:'POST',
+      crossDomain: true,
+      success:function(data){
+           
+        app7.preloader.hide();
+  
+        var objson = JSON.parse(data);
+
+        var producto="";
+
+        for(x in objson.data){
+
+         // console.log(objson.data[x].titulo);
+
+         producto = '<a href="javascript:verproducto('+objson.data[x].id+')" class="card demo-card-header-pic vistaproductos"><div style="background-image:url('+objson.data[x].imagen1+')" class="card-header align-items-flex-end">'+objson.data[x].titulo+'</div><div class="card-content card-content-padding"><p class="date">'+objson.data[x].marca+'</p></div><div class"row"><div class="letraprod" style="padding-left: 20%;">'+objson.data[x].talla+'</div><div class="letraprod" style="padding-left: 10%;">'+objson.data[x].precio+'</div></div> <div class="card-footer"></div></a>';
+
+          $$('#productos').append(producto);
+        }
+
+      },
+      error:function(error){
+  
+        app7.preloader.hide();
+      }
+      });
+
+  }
 
   function verproducto(id){
     idproducto = id;
@@ -1321,10 +1365,11 @@ function ValidaUsuario(){
 
 function Favorito(id){
 
-  alert(id);
+  
 
   if (ValidaUsuario()){
 
+    
 
   var producto = id;
   var correo = localStorage.getItem('correo');
@@ -1332,28 +1377,31 @@ function Favorito(id){
 
 
   app7.request({
-    url: 'https://localhost/hoop/api/setfavorito.php',
+    url: 'http://localhost/hoop/api/setfavorito.php',
     data:{correo:correo,producto:producto},
     method:'POST',
     crossDomain: true,
     success:function(resultado){
 
-      alert(resultado);
+     
 
       var objson = JSON.parse(resultado);
 
       if(objson.data=="ELIMINADO"){ //sin color
 
-        $$('#favorito-'+id).attr('class','f7-icons');
+       
+
+        $$('#favorito-producto').attr('class','f7-icons');
 
       }else{ //color en rojo f7-icons
 
-        $$('#favorito-'+id).attr('class','f7-icons red');
+        $$('#favorito-producto').attr('class','f7-icons redfav');
       }
 
     },
     error:function(error){
 
+      alert("error");
   
     }
     });}
