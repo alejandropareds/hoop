@@ -88,7 +88,7 @@ var app = {
 
 
           app7.request({
-            url: 'https://hoopbazar.com/api/settoken.php',
+            url: 'http://localhost/hoop/api/settoken.php',
             data:{token:token,platform:platform},
             method:'POST',
             crossDomain: true,
@@ -184,7 +184,7 @@ var app7 = new Framework7({
     app7.preloader.show('blue');
 
     app7.request({
-      url: 'https://hoopbazar.com/api/login.php',
+      url: 'http://localhost/hoop/api/login.php',
       data:{correo:correo,password:password},
       method:'POST',
       crossDomain: true,
@@ -222,7 +222,7 @@ function Registrarse(){
   app7.preloader.show('blue');
 
   app7.request({
-    url: 'https://hoopbazar.com/api/users.php',
+    url: 'http://localhost/hoop/api/users.php',
     data:{nombre:nombre,apellidos:apellidos,correo:correo,password:password},
     method:'POST',
     crossDomain: true,
@@ -306,7 +306,7 @@ function Registrarse(){
         },
       });
       app7.request({
-        url: 'https://hoopbazar.com/api/producto.php',
+        url: 'http://localhost/hoop/api/producto.php',
         data:{id:idproducto},
         method:'POST',
         crossDomain: true,
@@ -343,13 +343,14 @@ function Registrarse(){
   
       getPromo3();
       getFavoritos();
+      getProductosPerfil();
     });
   function getPromo(){
   
     app7.preloader.show('blue');
   
     app7.request({
-      url: 'https://hoopbazar.com/api/promociones.php',
+      url: 'http://localhost/hoop/api/promociones.php',
       data:{},
       method:'POST',
       crossDomain: true,
@@ -390,7 +391,7 @@ function Registrarse(){
     app7.preloader.show('blue');
   
     app7.request({
-      url: 'https://hoopbazar.com/api/promociones.php',
+      url: 'http://localhost/hoop/api/promociones.php',
       data:{},
       method:'POST',
       crossDomain: true,
@@ -430,7 +431,7 @@ function Registrarse(){
     app7.preloader.show('blue');
   
     app7.request({
-      url: 'https://hoopbazar.com/api/promociones.php',
+      url: 'http://localhost/hoop/api/promociones.php',
       data:{},
       method:'POST',
       crossDomain: true,
@@ -1239,7 +1240,7 @@ function Registrarse(){
     $$('#productos').html("");
   
     app7.request({
-      url: 'https://hoopbazar.com/api/filtros.php',
+      url: 'http://localhost/hoop/api/filtros.php',
       data:{marca:marca2,talla:talla2,precio:precio2,categoria:categoria2,detalle:detalle2,condicion:condicion2,color:color2},
       method:'POST',
       crossDomain: true,
@@ -1307,6 +1308,44 @@ function Registrarse(){
 
   }
 
+  function getProductosPerfil(){
+
+    var correo = localStorage.getItem('correo');
+
+    app7.preloader.show('blue');
+    $$('#productos').html("");
+  
+    app7.request({
+      url: 'http://localhost/hoop/api/productoperfil.php',
+      data:{correo:correo},
+      method:'POST',
+      crossDomain: true,
+      success:function(data){
+           
+        app7.preloader.hide();
+  
+        var objson = JSON.parse(data);
+
+        var producto="";
+
+        for(x in objson.data){
+
+         // console.log(objson.data[x].titulo);
+
+         producto = '<a href="javascript:verproducto('+objson.data[x].id+')" class="card demo-card-header-pic vistaproductos"><div style="background-image:url('+objson.data[x].imagen1+')" class="card-header align-items-flex-end">'+objson.data[x].titulo+'</div><div class="card-content card-content-padding"><p class="date">'+objson.data[x].marca+'</p></div><div class"row"><div class="letraprod" style="padding-left: 20%;">'+objson.data[x].talla+'</div><div class="letraprod" style="padding-left: 10%;">'+objson.data[x].precio+'</div></div> <div class="card-footer"></div></a>';
+
+          $$('#productosp').append(producto);
+        }
+
+      },
+      error:function(error){
+  
+        app7.preloader.hide();
+      }
+      });
+
+  }
+  
   function verproducto(id){
     idproducto = id;
     mainView.router.navigate('/producto/',{animate:true});
